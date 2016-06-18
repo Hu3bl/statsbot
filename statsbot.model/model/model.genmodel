@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/statsbot.model/src" modelPluginID="statsbot.model"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/statsbot.model/src" modelPluginID="statsbot.model"
     modelName="Model" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>model.ecore</foreignModel>
-  <genPackages prefix="Model" disposableProviderFactory="true" ecorePackage="model.ecore#/"/>
+  <genPackages prefix="Model" disposableProviderFactory="true" ecorePackage="model.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//MapType">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//MapType/de"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//MapType/cs"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//MapType/aim"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//MapType/fy"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//RoundWinType">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//RoundWinType/Elimination"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//RoundWinType/BombExplode"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//RoundWinType/BombDefuse"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//RoundWinType/TimeExpired"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//RoundWinType/HostageRescue"/>
+    </genEnums>
+    <genClasses ecoreClass="model.ecore#//Player">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Player/SteamID"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Match"/>
+    <genClasses ecoreClass="model.ecore#//Map">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Map/MapName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Map/MapType"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Round">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Round/RoundWinType"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Kill">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Kill/Attacker"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Kill/Victim"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Kill/Assistent"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//DamagePvP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//DamagePvP/Attacker"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//DamagePvP/Victim"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//DamagePvP/withWeapon"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Weapon"/>
+    <genClasses ecoreClass="model.ecore#//RoundEvents"/>
+    <genClasses ecoreClass="model.ecore#//Buy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Buy/weapon"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Damage"/>
+    <genClasses ecoreClass="model.ecore#//DamagePvE">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//DamagePvE/player"/>
+    </genClasses>
+  </genPackages>
 </genmodel:GenModel>

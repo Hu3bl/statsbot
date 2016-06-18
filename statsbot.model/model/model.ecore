@@ -1,3 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    name="model" nsURI="http://statsbot.renehahn.de/model" nsPrefix="model"/>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://statsbot.renehahn.de/model" nsPrefix="model">
+  <eClassifiers xsi:type="ecore:EClass" name="Player">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SteamID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Match"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Map">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MapName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MapType" eType="#//MapType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MapType">
+    <eLiterals name="de"/>
+    <eLiterals name="cs" value="1"/>
+    <eLiterals name="aim" value="2"/>
+    <eLiterals name="fy" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Round">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RoundWinType" eType="#//RoundWinType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Kill" eSuperTypes="#//RoundEvents">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Attacker" lowerBound="1"
+        eType="#//Player"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Victim" lowerBound="1"
+        eType="#//Player"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Assistent" eType="#//Player"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DamagePvP" eSuperTypes="#//Damage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Attacker" lowerBound="1"
+        eType="#//Player"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Victim" lowerBound="1"
+        eType="#//Player"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="withWeapon" lowerBound="1"
+        eType="#//Weapon"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Weapon"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="RoundWinType">
+    <eLiterals name="Elimination"/>
+    <eLiterals name="BombExplode" literal=""/>
+    <eLiterals name="BombDefuse" literal=""/>
+    <eLiterals name="TimeExpired"/>
+    <eLiterals name="HostageRescue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoundEvents" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Buy" eSuperTypes="#//RoundEvents">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" lowerBound="1"
+        eType="#//Weapon"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Damage" abstract="true" eSuperTypes="#//RoundEvents"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DamagePvE" eSuperTypes="#//Damage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="player" lowerBound="1"
+        eType="#//Player"/>
+  </eClassifiers>
+</ecore:EPackage>
