@@ -159,5 +159,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ThrewStuffMessage/posZ"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ThrewStuffMessage/stuff"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//MessageBuffer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//MessageBuffer/messages"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

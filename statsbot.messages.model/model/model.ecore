@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://statsbot.renehahn.de/messages/model/0.1"
-    nsPrefix="messages">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MessagesModel" nsURI="http://statsbot.renehahn.de/messages/model/0.1"
+    nsPrefix="messagesModel">
   <eClassifiers xsi:type="ecore:EClass" name="Message" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="AttackedMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="attackerName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -88,7 +88,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="killedPosY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="killedPosZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weapon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headshot" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headshot" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KillAssistMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="userID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -154,5 +154,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="posY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="posZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stuff" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MessageBuffer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messages" upperBound="-1"
+        eType="#//Message" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
