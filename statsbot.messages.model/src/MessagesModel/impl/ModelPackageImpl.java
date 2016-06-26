@@ -26,6 +26,7 @@ import MessagesModel.RoundScoredMessage;
 import MessagesModel.RoundSpawnMessage;
 import MessagesModel.RoundStartMessage;
 import MessagesModel.SayMessage;
+import MessagesModel.SayTeamMessage;
 import MessagesModel.SwitchTeamMessage;
 import MessagesModel.TeamScoredMessage;
 import MessagesModel.ThrewStuffMessage;
@@ -218,6 +219,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EClass messageBufferEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sayTeamMessageEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -726,7 +734,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDisconnectedMessage_UserStreamID() {
+	public EAttribute getDisconnectedMessage_UserSteamID() {
 		return (EAttribute)disconnectedMessageEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -780,6 +788,42 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getGotTheBombMessage_UserName() {
+		return (EAttribute)gotTheBombMessageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGotTheBombMessage_UserTeam() {
+		return (EAttribute)gotTheBombMessageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGotTheBombMessage_UserSteamID() {
+		return (EAttribute)gotTheBombMessageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGotTheBombMessage_UserID() {
+		return (EAttribute)gotTheBombMessageEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getJoinTeamMessage() {
 		return joinTeamMessageEClass;
 	}
@@ -816,7 +860,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getJoinTeamMessage_UserStreamID() {
+	public EAttribute getJoinTeamMessage_UserSteamID() {
 		return (EAttribute)joinTeamMessageEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1104,7 +1148,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPurchasedMessage_UserStreamID() {
+	public EAttribute getPurchasedMessage_UserSteamID() {
 		return (EAttribute)purchasedMessageEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1302,15 +1346,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSayMessage_Type() {
-		return (EAttribute)sayMessageEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSwitchTeamMessage() {
 		return switchTeamMessageEClass;
 	}
@@ -1347,7 +1382,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSwitchTeamMessage_UserStreamID() {
+	public EAttribute getSwitchTeamMessage_UserSteamID() {
 		return (EAttribute)switchTeamMessageEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1500,6 +1535,60 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSayTeamMessage() {
+		return sayTeamMessageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSayTeamMessage_UserID() {
+		return (EAttribute)sayTeamMessageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSayTeamMessage_UserName() {
+		return (EAttribute)sayTeamMessageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSayTeamMessage_UserTeam() {
+		return (EAttribute)sayTeamMessageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSayTeamMessage_UserSteamID() {
+		return (EAttribute)sayTeamMessageEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSayTeamMessage_Text() {
+		return (EAttribute)sayTeamMessageEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ModelFactory getModelFactory() {
 		return (ModelFactory)getEFactoryInstance();
 	}
@@ -1579,7 +1668,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(disconnectedMessageEClass, DISCONNECTED_MESSAGE__USER_ID);
 		createEAttribute(disconnectedMessageEClass, DISCONNECTED_MESSAGE__USER_NAME);
 		createEAttribute(disconnectedMessageEClass, DISCONNECTED_MESSAGE__USER_TEAM);
-		createEAttribute(disconnectedMessageEClass, DISCONNECTED_MESSAGE__USER_STREAM_ID);
+		createEAttribute(disconnectedMessageEClass, DISCONNECTED_MESSAGE__USER_STEAM_ID);
 
 		enteredTheGameMessageEClass = createEClass(ENTERED_THE_GAME_MESSAGE);
 		createEAttribute(enteredTheGameMessageEClass, ENTERED_THE_GAME_MESSAGE__USER_ID);
@@ -1587,12 +1676,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(enteredTheGameMessageEClass, ENTERED_THE_GAME_MESSAGE__USER_STEAM_ID);
 
 		gotTheBombMessageEClass = createEClass(GOT_THE_BOMB_MESSAGE);
+		createEAttribute(gotTheBombMessageEClass, GOT_THE_BOMB_MESSAGE__USER_NAME);
+		createEAttribute(gotTheBombMessageEClass, GOT_THE_BOMB_MESSAGE__USER_TEAM);
+		createEAttribute(gotTheBombMessageEClass, GOT_THE_BOMB_MESSAGE__USER_STEAM_ID);
+		createEAttribute(gotTheBombMessageEClass, GOT_THE_BOMB_MESSAGE__USER_ID);
 
 		joinTeamMessageEClass = createEClass(JOIN_TEAM_MESSAGE);
 		createEAttribute(joinTeamMessageEClass, JOIN_TEAM_MESSAGE__USER_ID);
 		createEAttribute(joinTeamMessageEClass, JOIN_TEAM_MESSAGE__USER_NAME);
 		createEAttribute(joinTeamMessageEClass, JOIN_TEAM_MESSAGE__USER_TEAM);
-		createEAttribute(joinTeamMessageEClass, JOIN_TEAM_MESSAGE__USER_STREAM_ID);
+		createEAttribute(joinTeamMessageEClass, JOIN_TEAM_MESSAGE__USER_STEAM_ID);
 		createEAttribute(joinTeamMessageEClass, JOIN_TEAM_MESSAGE__JOINED_TEAM);
 
 		killMessageEClass = createEClass(KILL_MESSAGE);
@@ -1627,7 +1720,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(purchasedMessageEClass, PURCHASED_MESSAGE__USER_ID);
 		createEAttribute(purchasedMessageEClass, PURCHASED_MESSAGE__USER_NAME);
 		createEAttribute(purchasedMessageEClass, PURCHASED_MESSAGE__USER_TEAM);
-		createEAttribute(purchasedMessageEClass, PURCHASED_MESSAGE__USER_STREAM_ID);
+		createEAttribute(purchasedMessageEClass, PURCHASED_MESSAGE__USER_STEAM_ID);
 		createEAttribute(purchasedMessageEClass, PURCHASED_MESSAGE__PURCHASED_OBJECT);
 
 		remindRoundScoreMessageEClass = createEClass(REMIND_ROUND_SCORE_MESSAGE);
@@ -1656,13 +1749,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(sayMessageEClass, SAY_MESSAGE__USER_TEAM);
 		createEAttribute(sayMessageEClass, SAY_MESSAGE__USER_STEAM_ID);
 		createEAttribute(sayMessageEClass, SAY_MESSAGE__TEXT);
-		createEAttribute(sayMessageEClass, SAY_MESSAGE__TYPE);
 
 		switchTeamMessageEClass = createEClass(SWITCH_TEAM_MESSAGE);
 		createEAttribute(switchTeamMessageEClass, SWITCH_TEAM_MESSAGE__USER_ID);
 		createEAttribute(switchTeamMessageEClass, SWITCH_TEAM_MESSAGE__USER_NAME);
 		createEAttribute(switchTeamMessageEClass, SWITCH_TEAM_MESSAGE__USER_TEAM);
-		createEAttribute(switchTeamMessageEClass, SWITCH_TEAM_MESSAGE__USER_STREAM_ID);
+		createEAttribute(switchTeamMessageEClass, SWITCH_TEAM_MESSAGE__USER_STEAM_ID);
 		createEAttribute(switchTeamMessageEClass, SWITCH_TEAM_MESSAGE__SWITCHED_TEAM);
 
 		teamScoredMessageEClass = createEClass(TEAM_SCORED_MESSAGE);
@@ -1682,6 +1774,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		messageBufferEClass = createEClass(MESSAGE_BUFFER);
 		createEReference(messageBufferEClass, MESSAGE_BUFFER__MESSAGES);
+
+		sayTeamMessageEClass = createEClass(SAY_TEAM_MESSAGE);
+		createEAttribute(sayTeamMessageEClass, SAY_TEAM_MESSAGE__USER_ID);
+		createEAttribute(sayTeamMessageEClass, SAY_TEAM_MESSAGE__USER_NAME);
+		createEAttribute(sayTeamMessageEClass, SAY_TEAM_MESSAGE__USER_TEAM);
+		createEAttribute(sayTeamMessageEClass, SAY_TEAM_MESSAGE__USER_STEAM_ID);
+		createEAttribute(sayTeamMessageEClass, SAY_TEAM_MESSAGE__TEXT);
 	}
 
 	/**
@@ -1735,6 +1834,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		switchTeamMessageEClass.getESuperTypes().add(this.getMessage());
 		teamScoredMessageEClass.getESuperTypes().add(this.getMessage());
 		threwStuffMessageEClass.getESuperTypes().add(this.getMessage());
+		sayTeamMessageEClass.getESuperTypes().add(this.getMessage());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(messageEClass, Message.class, "Message", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1793,7 +1893,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getDisconnectedMessage_UserID(), ecorePackage.getEString(), "userID", null, 0, 1, DisconnectedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDisconnectedMessage_UserName(), ecorePackage.getEString(), "userName", null, 0, 1, DisconnectedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDisconnectedMessage_UserTeam(), ecorePackage.getEString(), "userTeam", null, 0, 1, DisconnectedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDisconnectedMessage_UserStreamID(), ecorePackage.getEString(), "userStreamID", null, 0, 1, DisconnectedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDisconnectedMessage_UserSteamID(), ecorePackage.getEString(), "userSteamID", null, 0, 1, DisconnectedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enteredTheGameMessageEClass, EnteredTheGameMessage.class, "EnteredTheGameMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEnteredTheGameMessage_UserID(), ecorePackage.getEString(), "userID", null, 0, 1, EnteredTheGameMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1801,12 +1901,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getEnteredTheGameMessage_UserSteamID(), ecorePackage.getEString(), "userSteamID", null, 0, 1, EnteredTheGameMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gotTheBombMessageEClass, GotTheBombMessage.class, "GotTheBombMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGotTheBombMessage_UserName(), ecorePackage.getEString(), "userName", null, 0, 1, GotTheBombMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGotTheBombMessage_UserTeam(), ecorePackage.getEString(), "userTeam", null, 0, 1, GotTheBombMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGotTheBombMessage_UserSteamID(), ecorePackage.getEString(), "userSteamID", null, 0, 1, GotTheBombMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGotTheBombMessage_UserID(), ecorePackage.getEString(), "userID", null, 0, 1, GotTheBombMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(joinTeamMessageEClass, JoinTeamMessage.class, "JoinTeamMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getJoinTeamMessage_UserID(), ecorePackage.getEString(), "userID", null, 0, 1, JoinTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getJoinTeamMessage_UserName(), ecorePackage.getEString(), "userName", null, 0, 1, JoinTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getJoinTeamMessage_UserTeam(), ecorePackage.getEString(), "userTeam", null, 0, 1, JoinTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getJoinTeamMessage_UserStreamID(), ecorePackage.getEString(), "userStreamID", null, 0, 1, JoinTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJoinTeamMessage_UserSteamID(), ecorePackage.getEString(), "userSteamID", null, 0, 1, JoinTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getJoinTeamMessage_JoinedTeam(), ecorePackage.getEString(), "joinedTeam", null, 0, 1, JoinTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(killMessageEClass, KillMessage.class, "KillMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1841,7 +1945,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getPurchasedMessage_UserID(), ecorePackage.getEString(), "userID", null, 0, 1, PurchasedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPurchasedMessage_UserName(), ecorePackage.getEString(), "userName", null, 0, 1, PurchasedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPurchasedMessage_UserTeam(), ecorePackage.getEString(), "userTeam", null, 0, 1, PurchasedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPurchasedMessage_UserStreamID(), ecorePackage.getEString(), "userStreamID", null, 0, 1, PurchasedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPurchasedMessage_UserSteamID(), ecorePackage.getEString(), "userSteamID", null, 0, 1, PurchasedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPurchasedMessage_PurchasedObject(), ecorePackage.getEString(), "purchasedObject", null, 0, 1, PurchasedMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(remindRoundScoreMessageEClass, RemindRoundScoreMessage.class, "RemindRoundScoreMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1870,13 +1974,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getSayMessage_UserTeam(), ecorePackage.getEString(), "userTeam", null, 0, 1, SayMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSayMessage_UserSteamID(), ecorePackage.getEString(), "userSteamID", null, 0, 1, SayMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSayMessage_Text(), ecorePackage.getEString(), "text", null, 0, 1, SayMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSayMessage_Type(), ecorePackage.getEString(), "type", null, 0, 1, SayMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(switchTeamMessageEClass, SwitchTeamMessage.class, "SwitchTeamMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSwitchTeamMessage_UserID(), ecorePackage.getEString(), "userID", null, 0, 1, SwitchTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSwitchTeamMessage_UserName(), ecorePackage.getEString(), "userName", null, 0, 1, SwitchTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSwitchTeamMessage_UserTeam(), ecorePackage.getEString(), "userTeam", null, 0, 1, SwitchTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSwitchTeamMessage_UserStreamID(), ecorePackage.getEString(), "userStreamID", null, 0, 1, SwitchTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSwitchTeamMessage_UserSteamID(), ecorePackage.getEString(), "userSteamID", null, 0, 1, SwitchTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSwitchTeamMessage_SwitchedTeam(), ecorePackage.getEString(), "switchedTeam", null, 0, 1, SwitchTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(teamScoredMessageEClass, TeamScoredMessage.class, "TeamScoredMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1896,6 +1999,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		initEClass(messageBufferEClass, MessageBuffer.class, "MessageBuffer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMessageBuffer_Messages(), this.getMessage(), null, "messages", null, 0, -1, MessageBuffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sayTeamMessageEClass, SayTeamMessage.class, "SayTeamMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSayTeamMessage_UserID(), ecorePackage.getEString(), "userID", null, 0, 1, SayTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSayTeamMessage_UserName(), ecorePackage.getEString(), "userName", null, 0, 1, SayTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSayTeamMessage_UserTeam(), ecorePackage.getEString(), "userTeam", null, 0, 1, SayTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSayTeamMessage_UserSteamID(), ecorePackage.getEString(), "userSteamID", null, 0, 1, SayTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSayTeamMessage_Text(), ecorePackage.getEString(), "text", null, 0, 1, SayTeamMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

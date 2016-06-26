@@ -17,7 +17,6 @@ package MessagesModel;
  *   <li>{@link MessagesModel.SayMessage#getUserTeam <em>User Team</em>}</li>
  *   <li>{@link MessagesModel.SayMessage#getUserSteamID <em>User Steam ID</em>}</li>
  *   <li>{@link MessagesModel.SayMessage#getText <em>Text</em>}</li>
- *   <li>{@link MessagesModel.SayMessage#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see MessagesModel.ModelPackage#getSayMessage()
@@ -154,31 +153,5 @@ public interface SayMessage extends Message {
 	 * @generated
 	 */
 	void setText(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(String)
-	 * @see MessagesModel.ModelPackage#getSayMessage_Type()
-	 * @model
-	 * @generated
-	 */
-	String getType();
-
-	/**
-	 * Sets the value of the '{@link MessagesModel.SayMessage#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see #getType()
-	 * @generated
-	 */
-	void setType(String value);
 
 } // SayMessage

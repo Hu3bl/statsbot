@@ -1,8 +1,10 @@
-package statsbot.core.udpserver;
+package statsbot.core.udp.server;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
+
+import statsbot.core.udp.parser.UDPParser;
 
 public class UDPServer 
 {
@@ -24,6 +26,7 @@ public class UDPServer
 	
 	public void startListening()
 	{
+		UDPParser parser = new UDPParser();
 		try
 		{
 			while(true)
@@ -35,7 +38,17 @@ public class UDPServer
 	            socket.receive( packet ) ;
 
 	            // Print the packet
-	            System.out.println(new String(packet.getData())) ;
+	            System.out.println(new String(packet.getData()));
+	            
+	            // Process the packet
+	            if(parser.parseData(new String(packet.getData())))
+	            {
+	            	System.out.println("true");
+	            }
+	            else
+	            {
+	            	System.out.println("false");
+	            }
 	        }  
 		}
 		catch (Exception e)

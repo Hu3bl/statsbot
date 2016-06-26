@@ -15,7 +15,7 @@ package MessagesModel;
  *   <li>{@link MessagesModel.SwitchTeamMessage#getUserID <em>User ID</em>}</li>
  *   <li>{@link MessagesModel.SwitchTeamMessage#getUserName <em>User Name</em>}</li>
  *   <li>{@link MessagesModel.SwitchTeamMessage#getUserTeam <em>User Team</em>}</li>
- *   <li>{@link MessagesModel.SwitchTeamMessage#getUserStreamID <em>User Stream ID</em>}</li>
+ *   <li>{@link MessagesModel.SwitchTeamMessage#getUserSteamID <em>User Steam ID</em>}</li>
  *   <li>{@link MessagesModel.SwitchTeamMessage#getSwitchedTeam <em>Switched Team</em>}</li>
  * </ul>
  *
@@ -103,30 +103,30 @@ public interface SwitchTeamMessage extends Message {
 	void setUserTeam(String value);
 
 	/**
-	 * Returns the value of the '<em><b>User Stream ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Steam ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>User Stream ID</em>' attribute isn't clear,
+	 * If the meaning of the '<em>User Steam ID</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Stream ID</em>' attribute.
-	 * @see #setUserStreamID(String)
-	 * @see MessagesModel.ModelPackage#getSwitchTeamMessage_UserStreamID()
+	 * @return the value of the '<em>User Steam ID</em>' attribute.
+	 * @see #setUserSteamID(String)
+	 * @see MessagesModel.ModelPackage#getSwitchTeamMessage_UserSteamID()
 	 * @model
 	 * @generated
 	 */
-	String getUserStreamID();
+	String getUserSteamID();
 
 	/**
-	 * Sets the value of the '{@link MessagesModel.SwitchTeamMessage#getUserStreamID <em>User Stream ID</em>}' attribute.
+	 * Sets the value of the '{@link MessagesModel.SwitchTeamMessage#getUserSteamID <em>User Steam ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Stream ID</em>' attribute.
-	 * @see #getUserStreamID()
+	 * @param value the new value of the '<em>User Steam ID</em>' attribute.
+	 * @see #getUserSteamID()
 	 * @generated
 	 */
-	void setUserStreamID(String value);
+	void setUserSteamID(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Switched Team</b></em>' attribute.

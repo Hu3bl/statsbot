@@ -5,24 +5,25 @@ package MessagesModel;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Disconnected Message</b></em>'.
+ * A representation of the model object '<em><b>Say Team Message</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MessagesModel.DisconnectedMessage#getUserID <em>User ID</em>}</li>
- *   <li>{@link MessagesModel.DisconnectedMessage#getUserName <em>User Name</em>}</li>
- *   <li>{@link MessagesModel.DisconnectedMessage#getUserTeam <em>User Team</em>}</li>
- *   <li>{@link MessagesModel.DisconnectedMessage#getUserSteamID <em>User Steam ID</em>}</li>
+ *   <li>{@link MessagesModel.SayTeamMessage#getUserID <em>User ID</em>}</li>
+ *   <li>{@link MessagesModel.SayTeamMessage#getUserName <em>User Name</em>}</li>
+ *   <li>{@link MessagesModel.SayTeamMessage#getUserTeam <em>User Team</em>}</li>
+ *   <li>{@link MessagesModel.SayTeamMessage#getUserSteamID <em>User Steam ID</em>}</li>
+ *   <li>{@link MessagesModel.SayTeamMessage#getText <em>Text</em>}</li>
  * </ul>
  *
- * @see MessagesModel.ModelPackage#getDisconnectedMessage()
+ * @see MessagesModel.ModelPackage#getSayTeamMessage()
  * @model
  * @generated
  */
-public interface DisconnectedMessage extends Message {
+public interface SayTeamMessage extends Message {
 	/**
 	 * Returns the value of the '<em><b>User ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,14 +34,14 @@ public interface DisconnectedMessage extends Message {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>User ID</em>' attribute.
 	 * @see #setUserID(String)
-	 * @see MessagesModel.ModelPackage#getDisconnectedMessage_UserID()
+	 * @see MessagesModel.ModelPackage#getSayTeamMessage_UserID()
 	 * @model
 	 * @generated
 	 */
 	String getUserID();
 
 	/**
-	 * Sets the value of the '{@link MessagesModel.DisconnectedMessage#getUserID <em>User ID</em>}' attribute.
+	 * Sets the value of the '{@link MessagesModel.SayTeamMessage#getUserID <em>User ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>User ID</em>' attribute.
@@ -59,14 +60,14 @@ public interface DisconnectedMessage extends Message {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>User Name</em>' attribute.
 	 * @see #setUserName(String)
-	 * @see MessagesModel.ModelPackage#getDisconnectedMessage_UserName()
+	 * @see MessagesModel.ModelPackage#getSayTeamMessage_UserName()
 	 * @model
 	 * @generated
 	 */
 	String getUserName();
 
 	/**
-	 * Sets the value of the '{@link MessagesModel.DisconnectedMessage#getUserName <em>User Name</em>}' attribute.
+	 * Sets the value of the '{@link MessagesModel.SayTeamMessage#getUserName <em>User Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>User Name</em>' attribute.
@@ -85,14 +86,14 @@ public interface DisconnectedMessage extends Message {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>User Team</em>' attribute.
 	 * @see #setUserTeam(String)
-	 * @see MessagesModel.ModelPackage#getDisconnectedMessage_UserTeam()
+	 * @see MessagesModel.ModelPackage#getSayTeamMessage_UserTeam()
 	 * @model
 	 * @generated
 	 */
 	String getUserTeam();
 
 	/**
-	 * Sets the value of the '{@link MessagesModel.DisconnectedMessage#getUserTeam <em>User Team</em>}' attribute.
+	 * Sets the value of the '{@link MessagesModel.SayTeamMessage#getUserTeam <em>User Team</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>User Team</em>' attribute.
@@ -111,14 +112,14 @@ public interface DisconnectedMessage extends Message {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>User Steam ID</em>' attribute.
 	 * @see #setUserSteamID(String)
-	 * @see MessagesModel.ModelPackage#getDisconnectedMessage_UserSteamID()
+	 * @see MessagesModel.ModelPackage#getSayTeamMessage_UserSteamID()
 	 * @model
 	 * @generated
 	 */
 	String getUserSteamID();
 
 	/**
-	 * Sets the value of the '{@link MessagesModel.DisconnectedMessage#getUserSteamID <em>User Steam ID</em>}' attribute.
+	 * Sets the value of the '{@link MessagesModel.SayTeamMessage#getUserSteamID <em>User Steam ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>User Steam ID</em>' attribute.
@@ -127,4 +128,30 @@ public interface DisconnectedMessage extends Message {
 	 */
 	void setUserSteamID(String value);
 
-} // DisconnectedMessage
+	/**
+	 * Returns the value of the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Text</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Text</em>' attribute.
+	 * @see #setText(String)
+	 * @see MessagesModel.ModelPackage#getSayTeamMessage_Text()
+	 * @model
+	 * @generated
+	 */
+	String getText();
+
+	/**
+	 * Sets the value of the '{@link MessagesModel.SayTeamMessage#getText <em>Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Text</em>' attribute.
+	 * @see #getText()
+	 * @generated
+	 */
+	void setText(String value);
+
+} // SayTeamMessage

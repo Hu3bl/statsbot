@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link MessagesModel.impl.JoinTeamMessageImpl#getUserID <em>User ID</em>}</li>
  *   <li>{@link MessagesModel.impl.JoinTeamMessageImpl#getUserName <em>User Name</em>}</li>
  *   <li>{@link MessagesModel.impl.JoinTeamMessageImpl#getUserTeam <em>User Team</em>}</li>
- *   <li>{@link MessagesModel.impl.JoinTeamMessageImpl#getUserStreamID <em>User Stream ID</em>}</li>
+ *   <li>{@link MessagesModel.impl.JoinTeamMessageImpl#getUserSteamID <em>User Steam ID</em>}</li>
  *   <li>{@link MessagesModel.impl.JoinTeamMessageImpl#getJoinedTeam <em>Joined Team</em>}</li>
  * </ul>
  *
@@ -90,24 +90,24 @@ public class JoinTeamMessageImpl extends MessageImpl implements JoinTeamMessage 
 	protected String userTeam = USER_TEAM_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUserStreamID() <em>User Stream ID</em>}' attribute.
+	 * The default value of the '{@link #getUserSteamID() <em>User Steam ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUserStreamID()
+	 * @see #getUserSteamID()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String USER_STREAM_ID_EDEFAULT = null;
+	protected static final String USER_STEAM_ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUserStreamID() <em>User Stream ID</em>}' attribute.
+	 * The cached value of the '{@link #getUserSteamID() <em>User Steam ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUserStreamID()
+	 * @see #getUserSteamID()
 	 * @generated
 	 * @ordered
 	 */
-	protected String userStreamID = USER_STREAM_ID_EDEFAULT;
+	protected String userSteamID = USER_STEAM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getJoinedTeam() <em>Joined Team</em>}' attribute.
@@ -216,8 +216,8 @@ public class JoinTeamMessageImpl extends MessageImpl implements JoinTeamMessage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUserStreamID() {
-		return userStreamID;
+	public String getUserSteamID() {
+		return userSteamID;
 	}
 
 	/**
@@ -225,11 +225,11 @@ public class JoinTeamMessageImpl extends MessageImpl implements JoinTeamMessage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserStreamID(String newUserStreamID) {
-		String oldUserStreamID = userStreamID;
-		userStreamID = newUserStreamID;
+	public void setUserSteamID(String newUserSteamID) {
+		String oldUserSteamID = userSteamID;
+		userSteamID = newUserSteamID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.JOIN_TEAM_MESSAGE__USER_STREAM_ID, oldUserStreamID, userStreamID));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.JOIN_TEAM_MESSAGE__USER_STEAM_ID, oldUserSteamID, userSteamID));
 	}
 
 	/**
@@ -267,8 +267,8 @@ public class JoinTeamMessageImpl extends MessageImpl implements JoinTeamMessage 
 				return getUserName();
 			case ModelPackage.JOIN_TEAM_MESSAGE__USER_TEAM:
 				return getUserTeam();
-			case ModelPackage.JOIN_TEAM_MESSAGE__USER_STREAM_ID:
-				return getUserStreamID();
+			case ModelPackage.JOIN_TEAM_MESSAGE__USER_STEAM_ID:
+				return getUserSteamID();
 			case ModelPackage.JOIN_TEAM_MESSAGE__JOINED_TEAM:
 				return getJoinedTeam();
 		}
@@ -292,8 +292,8 @@ public class JoinTeamMessageImpl extends MessageImpl implements JoinTeamMessage 
 			case ModelPackage.JOIN_TEAM_MESSAGE__USER_TEAM:
 				setUserTeam((String)newValue);
 				return;
-			case ModelPackage.JOIN_TEAM_MESSAGE__USER_STREAM_ID:
-				setUserStreamID((String)newValue);
+			case ModelPackage.JOIN_TEAM_MESSAGE__USER_STEAM_ID:
+				setUserSteamID((String)newValue);
 				return;
 			case ModelPackage.JOIN_TEAM_MESSAGE__JOINED_TEAM:
 				setJoinedTeam((String)newValue);
@@ -319,8 +319,8 @@ public class JoinTeamMessageImpl extends MessageImpl implements JoinTeamMessage 
 			case ModelPackage.JOIN_TEAM_MESSAGE__USER_TEAM:
 				setUserTeam(USER_TEAM_EDEFAULT);
 				return;
-			case ModelPackage.JOIN_TEAM_MESSAGE__USER_STREAM_ID:
-				setUserStreamID(USER_STREAM_ID_EDEFAULT);
+			case ModelPackage.JOIN_TEAM_MESSAGE__USER_STEAM_ID:
+				setUserSteamID(USER_STEAM_ID_EDEFAULT);
 				return;
 			case ModelPackage.JOIN_TEAM_MESSAGE__JOINED_TEAM:
 				setJoinedTeam(JOINED_TEAM_EDEFAULT);
@@ -343,8 +343,8 @@ public class JoinTeamMessageImpl extends MessageImpl implements JoinTeamMessage 
 				return USER_NAME_EDEFAULT == null ? userName != null : !USER_NAME_EDEFAULT.equals(userName);
 			case ModelPackage.JOIN_TEAM_MESSAGE__USER_TEAM:
 				return USER_TEAM_EDEFAULT == null ? userTeam != null : !USER_TEAM_EDEFAULT.equals(userTeam);
-			case ModelPackage.JOIN_TEAM_MESSAGE__USER_STREAM_ID:
-				return USER_STREAM_ID_EDEFAULT == null ? userStreamID != null : !USER_STREAM_ID_EDEFAULT.equals(userStreamID);
+			case ModelPackage.JOIN_TEAM_MESSAGE__USER_STEAM_ID:
+				return USER_STEAM_ID_EDEFAULT == null ? userSteamID != null : !USER_STEAM_ID_EDEFAULT.equals(userSteamID);
 			case ModelPackage.JOIN_TEAM_MESSAGE__JOINED_TEAM:
 				return JOINED_TEAM_EDEFAULT == null ? joinedTeam != null : !JOINED_TEAM_EDEFAULT.equals(joinedTeam);
 		}
@@ -367,8 +367,8 @@ public class JoinTeamMessageImpl extends MessageImpl implements JoinTeamMessage 
 		result.append(userName);
 		result.append(", userTeam: ");
 		result.append(userTeam);
-		result.append(", userStreamID: ");
-		result.append(userStreamID);
+		result.append(", userSteamID: ");
+		result.append(userSteamID);
 		result.append(", joinedTeam: ");
 		result.append(joinedTeam);
 		result.append(')');

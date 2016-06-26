@@ -632,13 +632,13 @@ public interface ModelPackage extends EPackage {
 	int DISCONNECTED_MESSAGE__USER_TEAM = MESSAGE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>User Stream ID</b></em>' attribute.
+	 * The feature id for the '<em><b>User Steam ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISCONNECTED_MESSAGE__USER_STREAM_ID = MESSAGE_FEATURE_COUNT + 3;
+	int DISCONNECTED_MESSAGE__USER_STEAM_ID = MESSAGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Disconnected Message</em>' class.
@@ -724,13 +724,49 @@ public interface ModelPackage extends EPackage {
 	int GOT_THE_BOMB_MESSAGE = 9;
 
 	/**
+	 * The feature id for the '<em><b>User Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOT_THE_BOMB_MESSAGE__USER_NAME = MESSAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>User Team</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOT_THE_BOMB_MESSAGE__USER_TEAM = MESSAGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>User Steam ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOT_THE_BOMB_MESSAGE__USER_STEAM_ID = MESSAGE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>User ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOT_THE_BOMB_MESSAGE__USER_ID = MESSAGE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Got The Bomb Message</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOT_THE_BOMB_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 0;
+	int GOT_THE_BOMB_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Got The Bomb Message</em>' class.
@@ -779,13 +815,13 @@ public interface ModelPackage extends EPackage {
 	int JOIN_TEAM_MESSAGE__USER_TEAM = MESSAGE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>User Stream ID</b></em>' attribute.
+	 * The feature id for the '<em><b>User Steam ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JOIN_TEAM_MESSAGE__USER_STREAM_ID = MESSAGE_FEATURE_COUNT + 3;
+	int JOIN_TEAM_MESSAGE__USER_STEAM_ID = MESSAGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Joined Team</b></em>' attribute.
@@ -1124,13 +1160,13 @@ public interface ModelPackage extends EPackage {
 	int PURCHASED_MESSAGE__USER_TEAM = MESSAGE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>User Stream ID</b></em>' attribute.
+	 * The feature id for the '<em><b>User Steam ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PURCHASED_MESSAGE__USER_STREAM_ID = MESSAGE_FEATURE_COUNT + 3;
+	int PURCHASED_MESSAGE__USER_STEAM_ID = MESSAGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Purchased Object</b></em>' attribute.
@@ -1455,22 +1491,13 @@ public interface ModelPackage extends EPackage {
 	int SAY_MESSAGE__TEXT = MESSAGE_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SAY_MESSAGE__TYPE = MESSAGE_FEATURE_COUNT + 5;
-
-	/**
 	 * The number of structural features of the '<em>Say Message</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SAY_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 6;
+	int SAY_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Say Message</em>' class.
@@ -1519,13 +1546,13 @@ public interface ModelPackage extends EPackage {
 	int SWITCH_TEAM_MESSAGE__USER_TEAM = MESSAGE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>User Stream ID</b></em>' attribute.
+	 * The feature id for the '<em><b>User Steam ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SWITCH_TEAM_MESSAGE__USER_STREAM_ID = MESSAGE_FEATURE_COUNT + 3;
+	int SWITCH_TEAM_MESSAGE__USER_STEAM_ID = MESSAGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Switched Team</b></em>' attribute.
@@ -1745,6 +1772,80 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int MESSAGE_BUFFER_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link MessagesModel.impl.SayTeamMessageImpl <em>Say Team Message</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MessagesModel.impl.SayTeamMessageImpl
+	 * @see MessagesModel.impl.ModelPackageImpl#getSayTeamMessage()
+	 * @generated
+	 */
+	int SAY_TEAM_MESSAGE = 25;
+
+	/**
+	 * The feature id for the '<em><b>User ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAY_TEAM_MESSAGE__USER_ID = MESSAGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>User Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAY_TEAM_MESSAGE__USER_NAME = MESSAGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>User Team</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAY_TEAM_MESSAGE__USER_TEAM = MESSAGE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>User Steam ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAY_TEAM_MESSAGE__USER_STEAM_ID = MESSAGE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAY_TEAM_MESSAGE__TEXT = MESSAGE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Say Team Message</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAY_TEAM_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Say Team Message</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAY_TEAM_MESSAGE_OPERATION_COUNT = MESSAGE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -2279,15 +2380,15 @@ public interface ModelPackage extends EPackage {
 	EAttribute getDisconnectedMessage_UserTeam();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MessagesModel.DisconnectedMessage#getUserStreamID <em>User Stream ID</em>}'.
+	 * Returns the meta object for the attribute '{@link MessagesModel.DisconnectedMessage#getUserSteamID <em>User Steam ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>User Stream ID</em>'.
-	 * @see MessagesModel.DisconnectedMessage#getUserStreamID()
+	 * @return the meta object for the attribute '<em>User Steam ID</em>'.
+	 * @see MessagesModel.DisconnectedMessage#getUserSteamID()
 	 * @see #getDisconnectedMessage()
 	 * @generated
 	 */
-	EAttribute getDisconnectedMessage_UserStreamID();
+	EAttribute getDisconnectedMessage_UserSteamID();
 
 	/**
 	 * Returns the meta object for class '{@link MessagesModel.EnteredTheGameMessage <em>Entered The Game Message</em>}'.
@@ -2343,6 +2444,50 @@ public interface ModelPackage extends EPackage {
 	EClass getGotTheBombMessage();
 
 	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.GotTheBombMessage#getUserName <em>User Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User Name</em>'.
+	 * @see MessagesModel.GotTheBombMessage#getUserName()
+	 * @see #getGotTheBombMessage()
+	 * @generated
+	 */
+	EAttribute getGotTheBombMessage_UserName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.GotTheBombMessage#getUserTeam <em>User Team</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User Team</em>'.
+	 * @see MessagesModel.GotTheBombMessage#getUserTeam()
+	 * @see #getGotTheBombMessage()
+	 * @generated
+	 */
+	EAttribute getGotTheBombMessage_UserTeam();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.GotTheBombMessage#getUserSteamID <em>User Steam ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User Steam ID</em>'.
+	 * @see MessagesModel.GotTheBombMessage#getUserSteamID()
+	 * @see #getGotTheBombMessage()
+	 * @generated
+	 */
+	EAttribute getGotTheBombMessage_UserSteamID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.GotTheBombMessage#getUserID <em>User ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User ID</em>'.
+	 * @see MessagesModel.GotTheBombMessage#getUserID()
+	 * @see #getGotTheBombMessage()
+	 * @generated
+	 */
+	EAttribute getGotTheBombMessage_UserID();
+
+	/**
 	 * Returns the meta object for class '{@link MessagesModel.JoinTeamMessage <em>Join Team Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2386,15 +2531,15 @@ public interface ModelPackage extends EPackage {
 	EAttribute getJoinTeamMessage_UserTeam();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MessagesModel.JoinTeamMessage#getUserStreamID <em>User Stream ID</em>}'.
+	 * Returns the meta object for the attribute '{@link MessagesModel.JoinTeamMessage#getUserSteamID <em>User Steam ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>User Stream ID</em>'.
-	 * @see MessagesModel.JoinTeamMessage#getUserStreamID()
+	 * @return the meta object for the attribute '<em>User Steam ID</em>'.
+	 * @see MessagesModel.JoinTeamMessage#getUserSteamID()
 	 * @see #getJoinTeamMessage()
 	 * @generated
 	 */
-	EAttribute getJoinTeamMessage_UserStreamID();
+	EAttribute getJoinTeamMessage_UserSteamID();
 
 	/**
 	 * Returns the meta object for the attribute '{@link MessagesModel.JoinTeamMessage#getJoinedTeam <em>Joined Team</em>}'.
@@ -2735,15 +2880,15 @@ public interface ModelPackage extends EPackage {
 	EAttribute getPurchasedMessage_UserTeam();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MessagesModel.PurchasedMessage#getUserStreamID <em>User Stream ID</em>}'.
+	 * Returns the meta object for the attribute '{@link MessagesModel.PurchasedMessage#getUserSteamID <em>User Steam ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>User Stream ID</em>'.
-	 * @see MessagesModel.PurchasedMessage#getUserStreamID()
+	 * @return the meta object for the attribute '<em>User Steam ID</em>'.
+	 * @see MessagesModel.PurchasedMessage#getUserSteamID()
 	 * @see #getPurchasedMessage()
 	 * @generated
 	 */
-	EAttribute getPurchasedMessage_UserStreamID();
+	EAttribute getPurchasedMessage_UserSteamID();
 
 	/**
 	 * Returns the meta object for the attribute '{@link MessagesModel.PurchasedMessage#getPurchasedObject <em>Purchased Object</em>}'.
@@ -2970,17 +3115,6 @@ public interface ModelPackage extends EPackage {
 	EAttribute getSayMessage_Text();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MessagesModel.SayMessage#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see MessagesModel.SayMessage#getType()
-	 * @see #getSayMessage()
-	 * @generated
-	 */
-	EAttribute getSayMessage_Type();
-
-	/**
 	 * Returns the meta object for class '{@link MessagesModel.SwitchTeamMessage <em>Switch Team Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3024,15 +3158,15 @@ public interface ModelPackage extends EPackage {
 	EAttribute getSwitchTeamMessage_UserTeam();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MessagesModel.SwitchTeamMessage#getUserStreamID <em>User Stream ID</em>}'.
+	 * Returns the meta object for the attribute '{@link MessagesModel.SwitchTeamMessage#getUserSteamID <em>User Steam ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>User Stream ID</em>'.
-	 * @see MessagesModel.SwitchTeamMessage#getUserStreamID()
+	 * @return the meta object for the attribute '<em>User Steam ID</em>'.
+	 * @see MessagesModel.SwitchTeamMessage#getUserSteamID()
 	 * @see #getSwitchTeamMessage()
 	 * @generated
 	 */
-	EAttribute getSwitchTeamMessage_UserStreamID();
+	EAttribute getSwitchTeamMessage_UserSteamID();
 
 	/**
 	 * Returns the meta object for the attribute '{@link MessagesModel.SwitchTeamMessage#getSwitchedTeam <em>Switched Team</em>}'.
@@ -3206,6 +3340,71 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMessageBuffer_Messages();
+
+	/**
+	 * Returns the meta object for class '{@link MessagesModel.SayTeamMessage <em>Say Team Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Say Team Message</em>'.
+	 * @see MessagesModel.SayTeamMessage
+	 * @generated
+	 */
+	EClass getSayTeamMessage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.SayTeamMessage#getUserID <em>User ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User ID</em>'.
+	 * @see MessagesModel.SayTeamMessage#getUserID()
+	 * @see #getSayTeamMessage()
+	 * @generated
+	 */
+	EAttribute getSayTeamMessage_UserID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.SayTeamMessage#getUserName <em>User Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User Name</em>'.
+	 * @see MessagesModel.SayTeamMessage#getUserName()
+	 * @see #getSayTeamMessage()
+	 * @generated
+	 */
+	EAttribute getSayTeamMessage_UserName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.SayTeamMessage#getUserTeam <em>User Team</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User Team</em>'.
+	 * @see MessagesModel.SayTeamMessage#getUserTeam()
+	 * @see #getSayTeamMessage()
+	 * @generated
+	 */
+	EAttribute getSayTeamMessage_UserTeam();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.SayTeamMessage#getUserSteamID <em>User Steam ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User Steam ID</em>'.
+	 * @see MessagesModel.SayTeamMessage#getUserSteamID()
+	 * @see #getSayTeamMessage()
+	 * @generated
+	 */
+	EAttribute getSayTeamMessage_UserSteamID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.SayTeamMessage#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see MessagesModel.SayTeamMessage#getText()
+	 * @see #getSayTeamMessage()
+	 * @generated
+	 */
+	EAttribute getSayTeamMessage_Text();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3639,12 +3838,12 @@ public interface ModelPackage extends EPackage {
 		EAttribute DISCONNECTED_MESSAGE__USER_TEAM = eINSTANCE.getDisconnectedMessage_UserTeam();
 
 		/**
-		 * The meta object literal for the '<em><b>User Stream ID</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>User Steam ID</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DISCONNECTED_MESSAGE__USER_STREAM_ID = eINSTANCE.getDisconnectedMessage_UserStreamID();
+		EAttribute DISCONNECTED_MESSAGE__USER_STEAM_ID = eINSTANCE.getDisconnectedMessage_UserSteamID();
 
 		/**
 		 * The meta object literal for the '{@link MessagesModel.impl.EnteredTheGameMessageImpl <em>Entered The Game Message</em>}' class.
@@ -3691,6 +3890,38 @@ public interface ModelPackage extends EPackage {
 		EClass GOT_THE_BOMB_MESSAGE = eINSTANCE.getGotTheBombMessage();
 
 		/**
+		 * The meta object literal for the '<em><b>User Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GOT_THE_BOMB_MESSAGE__USER_NAME = eINSTANCE.getGotTheBombMessage_UserName();
+
+		/**
+		 * The meta object literal for the '<em><b>User Team</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GOT_THE_BOMB_MESSAGE__USER_TEAM = eINSTANCE.getGotTheBombMessage_UserTeam();
+
+		/**
+		 * The meta object literal for the '<em><b>User Steam ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GOT_THE_BOMB_MESSAGE__USER_STEAM_ID = eINSTANCE.getGotTheBombMessage_UserSteamID();
+
+		/**
+		 * The meta object literal for the '<em><b>User ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GOT_THE_BOMB_MESSAGE__USER_ID = eINSTANCE.getGotTheBombMessage_UserID();
+
+		/**
 		 * The meta object literal for the '{@link MessagesModel.impl.JoinTeamMessageImpl <em>Join Team Message</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3725,12 +3956,12 @@ public interface ModelPackage extends EPackage {
 		EAttribute JOIN_TEAM_MESSAGE__USER_TEAM = eINSTANCE.getJoinTeamMessage_UserTeam();
 
 		/**
-		 * The meta object literal for the '<em><b>User Stream ID</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>User Steam ID</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JOIN_TEAM_MESSAGE__USER_STREAM_ID = eINSTANCE.getJoinTeamMessage_UserStreamID();
+		EAttribute JOIN_TEAM_MESSAGE__USER_STEAM_ID = eINSTANCE.getJoinTeamMessage_UserSteamID();
 
 		/**
 		 * The meta object literal for the '<em><b>Joined Team</b></em>' attribute feature.
@@ -3987,12 +4218,12 @@ public interface ModelPackage extends EPackage {
 		EAttribute PURCHASED_MESSAGE__USER_TEAM = eINSTANCE.getPurchasedMessage_UserTeam();
 
 		/**
-		 * The meta object literal for the '<em><b>User Stream ID</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>User Steam ID</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PURCHASED_MESSAGE__USER_STREAM_ID = eINSTANCE.getPurchasedMessage_UserStreamID();
+		EAttribute PURCHASED_MESSAGE__USER_STEAM_ID = eINSTANCE.getPurchasedMessage_UserSteamID();
 
 		/**
 		 * The meta object literal for the '<em><b>Purchased Object</b></em>' attribute feature.
@@ -4177,14 +4408,6 @@ public interface ModelPackage extends EPackage {
 		EAttribute SAY_MESSAGE__TEXT = eINSTANCE.getSayMessage_Text();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SAY_MESSAGE__TYPE = eINSTANCE.getSayMessage_Type();
-
-		/**
 		 * The meta object literal for the '{@link MessagesModel.impl.SwitchTeamMessageImpl <em>Switch Team Message</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4219,12 +4442,12 @@ public interface ModelPackage extends EPackage {
 		EAttribute SWITCH_TEAM_MESSAGE__USER_TEAM = eINSTANCE.getSwitchTeamMessage_UserTeam();
 
 		/**
-		 * The meta object literal for the '<em><b>User Stream ID</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>User Steam ID</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SWITCH_TEAM_MESSAGE__USER_STREAM_ID = eINSTANCE.getSwitchTeamMessage_UserStreamID();
+		EAttribute SWITCH_TEAM_MESSAGE__USER_STEAM_ID = eINSTANCE.getSwitchTeamMessage_UserSteamID();
 
 		/**
 		 * The meta object literal for the '<em><b>Switched Team</b></em>' attribute feature.
@@ -4359,6 +4582,56 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE_BUFFER__MESSAGES = eINSTANCE.getMessageBuffer_Messages();
+
+		/**
+		 * The meta object literal for the '{@link MessagesModel.impl.SayTeamMessageImpl <em>Say Team Message</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MessagesModel.impl.SayTeamMessageImpl
+		 * @see MessagesModel.impl.ModelPackageImpl#getSayTeamMessage()
+		 * @generated
+		 */
+		EClass SAY_TEAM_MESSAGE = eINSTANCE.getSayTeamMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>User ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SAY_TEAM_MESSAGE__USER_ID = eINSTANCE.getSayTeamMessage_UserID();
+
+		/**
+		 * The meta object literal for the '<em><b>User Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SAY_TEAM_MESSAGE__USER_NAME = eINSTANCE.getSayTeamMessage_UserName();
+
+		/**
+		 * The meta object literal for the '<em><b>User Team</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SAY_TEAM_MESSAGE__USER_TEAM = eINSTANCE.getSayTeamMessage_UserTeam();
+
+		/**
+		 * The meta object literal for the '<em><b>User Steam ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SAY_TEAM_MESSAGE__USER_STEAM_ID = eINSTANCE.getSayTeamMessage_UserSteamID();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SAY_TEAM_MESSAGE__TEXT = eINSTANCE.getSayTeamMessage_Text();
 
 	}
 

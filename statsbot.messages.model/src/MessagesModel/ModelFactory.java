@@ -238,6 +238,15 @@ public interface ModelFactory extends EFactory {
 	MessageBuffer createMessageBuffer();
 
 	/**
+	 * Returns a new object of class '<em>Say Team Message</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Say Team Message</em>'.
+	 * @generated
+	 */
+	SayTeamMessage createSayTeamMessage();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

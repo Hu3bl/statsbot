@@ -168,6 +168,10 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createMessageBufferAdapter();
 			}
 			@Override
+			public Adapter caseSayTeamMessage(SayTeamMessage object) {
+				return createSayTeamMessageAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -534,6 +538,20 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMessageBufferAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MessagesModel.SayTeamMessage <em>Say Team Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MessagesModel.SayTeamMessage
+	 * @generated
+	 */
+	public Adapter createSayTeamMessageAdapter() {
 		return null;
 	}
 

@@ -15,7 +15,7 @@ package MessagesModel;
  *   <li>{@link MessagesModel.PurchasedMessage#getUserID <em>User ID</em>}</li>
  *   <li>{@link MessagesModel.PurchasedMessage#getUserName <em>User Name</em>}</li>
  *   <li>{@link MessagesModel.PurchasedMessage#getUserTeam <em>User Team</em>}</li>
- *   <li>{@link MessagesModel.PurchasedMessage#getUserStreamID <em>User Stream ID</em>}</li>
+ *   <li>{@link MessagesModel.PurchasedMessage#getUserSteamID <em>User Steam ID</em>}</li>
  *   <li>{@link MessagesModel.PurchasedMessage#getPurchasedObject <em>Purchased Object</em>}</li>
  * </ul>
  *
@@ -103,30 +103,30 @@ public interface PurchasedMessage extends Message {
 	void setUserTeam(String value);
 
 	/**
-	 * Returns the value of the '<em><b>User Stream ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Steam ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>User Stream ID</em>' attribute isn't clear,
+	 * If the meaning of the '<em>User Steam ID</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Stream ID</em>' attribute.
-	 * @see #setUserStreamID(String)
-	 * @see MessagesModel.ModelPackage#getPurchasedMessage_UserStreamID()
+	 * @return the value of the '<em>User Steam ID</em>' attribute.
+	 * @see #setUserSteamID(String)
+	 * @see MessagesModel.ModelPackage#getPurchasedMessage_UserSteamID()
 	 * @model
 	 * @generated
 	 */
-	String getUserStreamID();
+	String getUserSteamID();
 
 	/**
-	 * Sets the value of the '{@link MessagesModel.PurchasedMessage#getUserStreamID <em>User Stream ID</em>}' attribute.
+	 * Sets the value of the '{@link MessagesModel.PurchasedMessage#getUserSteamID <em>User Steam ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Stream ID</em>' attribute.
-	 * @see #getUserStreamID()
+	 * @param value the new value of the '<em>User Steam ID</em>' attribute.
+	 * @see #getUserSteamID()
 	 * @generated
 	 */
-	void setUserStreamID(String value);
+	void setUserSteamID(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Purchased Object</b></em>' attribute.

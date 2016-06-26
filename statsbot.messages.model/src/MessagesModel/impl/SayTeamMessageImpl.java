@@ -3,7 +3,7 @@
 package MessagesModel.impl;
 
 import MessagesModel.ModelPackage;
-import MessagesModel.SwitchTeamMessage;
+import MessagesModel.SayTeamMessage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,22 +13,22 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Switch Team Message</b></em>'.
+ * An implementation of the model object '<em><b>Say Team Message</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MessagesModel.impl.SwitchTeamMessageImpl#getUserID <em>User ID</em>}</li>
- *   <li>{@link MessagesModel.impl.SwitchTeamMessageImpl#getUserName <em>User Name</em>}</li>
- *   <li>{@link MessagesModel.impl.SwitchTeamMessageImpl#getUserTeam <em>User Team</em>}</li>
- *   <li>{@link MessagesModel.impl.SwitchTeamMessageImpl#getUserSteamID <em>User Steam ID</em>}</li>
- *   <li>{@link MessagesModel.impl.SwitchTeamMessageImpl#getSwitchedTeam <em>Switched Team</em>}</li>
+ *   <li>{@link MessagesModel.impl.SayTeamMessageImpl#getUserID <em>User ID</em>}</li>
+ *   <li>{@link MessagesModel.impl.SayTeamMessageImpl#getUserName <em>User Name</em>}</li>
+ *   <li>{@link MessagesModel.impl.SayTeamMessageImpl#getUserTeam <em>User Team</em>}</li>
+ *   <li>{@link MessagesModel.impl.SayTeamMessageImpl#getUserSteamID <em>User Steam ID</em>}</li>
+ *   <li>{@link MessagesModel.impl.SayTeamMessageImpl#getText <em>Text</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMessage {
+public class SayTeamMessageImpl extends MessageImpl implements SayTeamMessage {
 	/**
 	 * The default value of the '{@link #getUserID() <em>User ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -110,31 +110,31 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 	protected String userSteamID = USER_STEAM_ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSwitchedTeam() <em>Switched Team</em>}' attribute.
+	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSwitchedTeam()
+	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SWITCHED_TEAM_EDEFAULT = null;
+	protected static final String TEXT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSwitchedTeam() <em>Switched Team</em>}' attribute.
+	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSwitchedTeam()
+	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected String switchedTeam = SWITCHED_TEAM_EDEFAULT;
+	protected String text = TEXT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SwitchTeamMessageImpl() {
+	protected SayTeamMessageImpl() {
 		super();
 	}
 
@@ -145,7 +145,7 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.SWITCH_TEAM_MESSAGE;
+		return ModelPackage.Literals.SAY_TEAM_MESSAGE;
 	}
 
 	/**
@@ -166,7 +166,7 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 		String oldUserID = userID;
 		userID = newUserID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SWITCH_TEAM_MESSAGE__USER_ID, oldUserID, userID));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SAY_TEAM_MESSAGE__USER_ID, oldUserID, userID));
 	}
 
 	/**
@@ -187,7 +187,7 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 		String oldUserName = userName;
 		userName = newUserName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SWITCH_TEAM_MESSAGE__USER_NAME, oldUserName, userName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SAY_TEAM_MESSAGE__USER_NAME, oldUserName, userName));
 	}
 
 	/**
@@ -208,7 +208,7 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 		String oldUserTeam = userTeam;
 		userTeam = newUserTeam;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SWITCH_TEAM_MESSAGE__USER_TEAM, oldUserTeam, userTeam));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SAY_TEAM_MESSAGE__USER_TEAM, oldUserTeam, userTeam));
 	}
 
 	/**
@@ -229,7 +229,7 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 		String oldUserSteamID = userSteamID;
 		userSteamID = newUserSteamID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SWITCH_TEAM_MESSAGE__USER_STEAM_ID, oldUserSteamID, userSteamID));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SAY_TEAM_MESSAGE__USER_STEAM_ID, oldUserSteamID, userSteamID));
 	}
 
 	/**
@@ -237,8 +237,8 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSwitchedTeam() {
-		return switchedTeam;
+	public String getText() {
+		return text;
 	}
 
 	/**
@@ -246,11 +246,11 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSwitchedTeam(String newSwitchedTeam) {
-		String oldSwitchedTeam = switchedTeam;
-		switchedTeam = newSwitchedTeam;
+	public void setText(String newText) {
+		String oldText = text;
+		text = newText;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SWITCH_TEAM_MESSAGE__SWITCHED_TEAM, oldSwitchedTeam, switchedTeam));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SAY_TEAM_MESSAGE__TEXT, oldText, text));
 	}
 
 	/**
@@ -261,16 +261,16 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_ID:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_ID:
 				return getUserID();
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_NAME:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_NAME:
 				return getUserName();
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_TEAM:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_TEAM:
 				return getUserTeam();
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_STEAM_ID:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_STEAM_ID:
 				return getUserSteamID();
-			case ModelPackage.SWITCH_TEAM_MESSAGE__SWITCHED_TEAM:
-				return getSwitchedTeam();
+			case ModelPackage.SAY_TEAM_MESSAGE__TEXT:
+				return getText();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -283,20 +283,20 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_ID:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_ID:
 				setUserID((String)newValue);
 				return;
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_NAME:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_NAME:
 				setUserName((String)newValue);
 				return;
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_TEAM:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_TEAM:
 				setUserTeam((String)newValue);
 				return;
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_STEAM_ID:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_STEAM_ID:
 				setUserSteamID((String)newValue);
 				return;
-			case ModelPackage.SWITCH_TEAM_MESSAGE__SWITCHED_TEAM:
-				setSwitchedTeam((String)newValue);
+			case ModelPackage.SAY_TEAM_MESSAGE__TEXT:
+				setText((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -310,20 +310,20 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_ID:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_ID:
 				setUserID(USER_ID_EDEFAULT);
 				return;
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_NAME:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_NAME:
 				setUserName(USER_NAME_EDEFAULT);
 				return;
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_TEAM:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_TEAM:
 				setUserTeam(USER_TEAM_EDEFAULT);
 				return;
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_STEAM_ID:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_STEAM_ID:
 				setUserSteamID(USER_STEAM_ID_EDEFAULT);
 				return;
-			case ModelPackage.SWITCH_TEAM_MESSAGE__SWITCHED_TEAM:
-				setSwitchedTeam(SWITCHED_TEAM_EDEFAULT);
+			case ModelPackage.SAY_TEAM_MESSAGE__TEXT:
+				setText(TEXT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -337,16 +337,16 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_ID:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_ID:
 				return USER_ID_EDEFAULT == null ? userID != null : !USER_ID_EDEFAULT.equals(userID);
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_NAME:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_NAME:
 				return USER_NAME_EDEFAULT == null ? userName != null : !USER_NAME_EDEFAULT.equals(userName);
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_TEAM:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_TEAM:
 				return USER_TEAM_EDEFAULT == null ? userTeam != null : !USER_TEAM_EDEFAULT.equals(userTeam);
-			case ModelPackage.SWITCH_TEAM_MESSAGE__USER_STEAM_ID:
+			case ModelPackage.SAY_TEAM_MESSAGE__USER_STEAM_ID:
 				return USER_STEAM_ID_EDEFAULT == null ? userSteamID != null : !USER_STEAM_ID_EDEFAULT.equals(userSteamID);
-			case ModelPackage.SWITCH_TEAM_MESSAGE__SWITCHED_TEAM:
-				return SWITCHED_TEAM_EDEFAULT == null ? switchedTeam != null : !SWITCHED_TEAM_EDEFAULT.equals(switchedTeam);
+			case ModelPackage.SAY_TEAM_MESSAGE__TEXT:
+				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -369,10 +369,10 @@ public class SwitchTeamMessageImpl extends MessageImpl implements SwitchTeamMess
 		result.append(userTeam);
 		result.append(", userSteamID: ");
 		result.append(userSteamID);
-		result.append(", switchedTeam: ");
-		result.append(switchedTeam);
+		result.append(", text: ");
+		result.append(text);
 		result.append(')');
 		return result.toString();
 	}
 
-} //SwitchTeamMessageImpl
+} //SayTeamMessageImpl

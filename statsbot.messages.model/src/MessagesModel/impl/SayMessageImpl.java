@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link MessagesModel.impl.SayMessageImpl#getUserTeam <em>User Team</em>}</li>
  *   <li>{@link MessagesModel.impl.SayMessageImpl#getUserSteamID <em>User Steam ID</em>}</li>
  *   <li>{@link MessagesModel.impl.SayMessageImpl#getText <em>Text</em>}</li>
- *   <li>{@link MessagesModel.impl.SayMessageImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -129,26 +128,6 @@ public class SayMessageImpl extends MessageImpl implements SayMessage {
 	 * @ordered
 	 */
 	protected String text = TEXT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -279,27 +258,6 @@ public class SayMessageImpl extends MessageImpl implements SayMessage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SAY_MESSAGE__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -313,8 +271,6 @@ public class SayMessageImpl extends MessageImpl implements SayMessage {
 				return getUserSteamID();
 			case ModelPackage.SAY_MESSAGE__TEXT:
 				return getText();
-			case ModelPackage.SAY_MESSAGE__TYPE:
-				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -341,9 +297,6 @@ public class SayMessageImpl extends MessageImpl implements SayMessage {
 				return;
 			case ModelPackage.SAY_MESSAGE__TEXT:
 				setText((String)newValue);
-				return;
-			case ModelPackage.SAY_MESSAGE__TYPE:
-				setType((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -372,9 +325,6 @@ public class SayMessageImpl extends MessageImpl implements SayMessage {
 			case ModelPackage.SAY_MESSAGE__TEXT:
 				setText(TEXT_EDEFAULT);
 				return;
-			case ModelPackage.SAY_MESSAGE__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -397,8 +347,6 @@ public class SayMessageImpl extends MessageImpl implements SayMessage {
 				return USER_STEAM_ID_EDEFAULT == null ? userSteamID != null : !USER_STEAM_ID_EDEFAULT.equals(userSteamID);
 			case ModelPackage.SAY_MESSAGE__TEXT:
 				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-			case ModelPackage.SAY_MESSAGE__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -423,8 +371,6 @@ public class SayMessageImpl extends MessageImpl implements SayMessage {
 		result.append(userSteamID);
 		result.append(", text: ");
 		result.append(text);
-		result.append(", type: ");
-		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

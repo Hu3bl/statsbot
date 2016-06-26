@@ -80,6 +80,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			case ModelPackage.TEAM_SCORED_MESSAGE: return createTeamScoredMessage();
 			case ModelPackage.THREW_STUFF_MESSAGE: return createThrewStuffMessage();
 			case ModelPackage.MESSAGE_BUFFER: return createMessageBuffer();
+			case ModelPackage.SAY_TEAM_MESSAGE: return createSayTeamMessage();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -323,6 +324,16 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public MessageBuffer createMessageBuffer() {
 		MessageBufferImpl messageBuffer = new MessageBufferImpl();
 		return messageBuffer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SayTeamMessage createSayTeamMessage() {
+		SayTeamMessageImpl sayTeamMessage = new SayTeamMessageImpl();
+		return sayTeamMessage;
 	}
 
 	/**

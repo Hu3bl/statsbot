@@ -1,8 +1,27 @@
 package statsbot.core.main;
 
-import statsbot.core.udpserver.UDPServer;
+import statsbot.core.udp.server.UDPServer;
 import statsbot.messages.regex.AttackedRegex;
-import MessagesModel.AttackedMessage;
+import statsbot.messages.regex.BombDefusingRegex;
+import statsbot.messages.regex.BombPlantingRegex;
+import statsbot.messages.regex.ChangeMapRegex;
+import statsbot.messages.regex.ChangeNameRegex;
+import statsbot.messages.regex.ConnectedRegex;
+import statsbot.messages.regex.DisconnectedRegex;
+import statsbot.messages.regex.EnteredTheGameRegex;
+import statsbot.messages.regex.GotTheBombRegex;
+import statsbot.messages.regex.JoinTeamRegex;
+import statsbot.messages.regex.KillAssistRegex;
+import statsbot.messages.regex.PurchasedRegex;
+import statsbot.messages.regex.RoundEndRegex;
+import statsbot.messages.regex.RoundRestartRegex;
+import statsbot.messages.regex.RoundScoredRegex;
+import statsbot.messages.regex.RoundStartRegex;
+import statsbot.messages.regex.SayRegex;
+import statsbot.messages.regex.SayTeamRegex;
+import statsbot.messages.regex.SwitchTeamRegex;
+import statsbot.messages.regex.TeamScoredRegex;
+import statsbot.messages.regex.ThrewStuffRegex;
 
 public class Main 
 {
@@ -10,12 +29,31 @@ public class Main
 	
 	public static void main( String args[] )
 	{
-		//UDPServer listener = new UDPServer(1337);
-		//listener.startListening();
+		AttackedRegex attackedRegex = new AttackedRegex();
+		BombDefusingRegex bombDefusingRegex = new BombDefusingRegex();
+		BombPlantingRegex bombPlantingRegex = new BombPlantingRegex();
+		ChangeMapRegex changeMapRegex = new ChangeMapRegex();
+		ChangeNameRegex changeNameRegex = new ChangeNameRegex();
+		ConnectedRegex ConnectedRegex = new ConnectedRegex();
+		DisconnectedRegex disconnectedRegex = new DisconnectedRegex();
+		EnteredTheGameRegex enteredTheGameRegex = new EnteredTheGameRegex();
+		GotTheBombRegex gotTheBombRegex = new GotTheBombRegex();
+		JoinTeamRegex joinTeamRegex = new JoinTeamRegex();
+		KillAssistRegex killAssistRegex = new KillAssistRegex();
+		PurchasedRegex purchasedRegex = new PurchasedRegex();
+		RoundEndRegex roundEndRegex = new RoundEndRegex();
+		RoundRestartRegex roundRestartRegex = new RoundRestartRegex();
+		RoundScoredRegex roundScoredRegex = new RoundScoredRegex();
+		RoundStartRegex roundStartRegex = new RoundStartRegex();
+		SayRegex sayRegex = new SayRegex();
+		SayTeamRegex sayTeamRegex = new SayTeamRegex();
+		SwitchTeamRegex switchTeamRegex = new SwitchTeamRegex();
+		TeamScoredRegex teamScoredRegex = new TeamScoredRegex();
+		ThrewStuffRegex threwStuffRegex = new ThrewStuffRegex();
 		
-		
-		
-		AttackedMessage message = AttackedRegex.getMessageObject(input);
-		System.out.println(message);
+		UDPServer listener = new UDPServer(1337);
+		listener.startListening();
 	}
+	
+	
 }

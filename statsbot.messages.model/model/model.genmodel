@@ -61,19 +61,24 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DisconnectedMessage/userID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DisconnectedMessage/userName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DisconnectedMessage/userTeam"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DisconnectedMessage/userStreamID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DisconnectedMessage/userSteamID"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//EnteredTheGameMessage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//EnteredTheGameMessage/userID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//EnteredTheGameMessage/userName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//EnteredTheGameMessage/userSteamID"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//GotTheBombMessage"/>
+    <genClasses ecoreClass="model.ecore#//GotTheBombMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GotTheBombMessage/userName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GotTheBombMessage/userTeam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GotTheBombMessage/userSteamID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//GotTheBombMessage/userID"/>
+    </genClasses>
     <genClasses ecoreClass="model.ecore#//JoinTeamMessage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//JoinTeamMessage/userID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//JoinTeamMessage/userName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//JoinTeamMessage/userTeam"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//JoinTeamMessage/userStreamID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//JoinTeamMessage/userSteamID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//JoinTeamMessage/joinedTeam"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//KillMessage">
@@ -108,7 +113,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PurchasedMessage/userID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PurchasedMessage/userName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PurchasedMessage/userTeam"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PurchasedMessage/userStreamID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PurchasedMessage/userSteamID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PurchasedMessage/purchasedObject"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//RemindRoundScoreMessage">
@@ -135,7 +140,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SayMessage/userTeam"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SayMessage/userSteamID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SayMessage/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SayMessage/type"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//SwitchTeamMessage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SwitchTeamMessage/userID"/>
@@ -161,6 +165,13 @@
     </genClasses>
     <genClasses ecoreClass="model.ecore#//MessageBuffer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//MessageBuffer/messages"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//SayTeamMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SayTeamMessage/userID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SayTeamMessage/userName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SayTeamMessage/userTeam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SayTeamMessage/userSteamID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SayTeamMessage/text"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

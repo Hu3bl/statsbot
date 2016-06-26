@@ -6,9 +6,8 @@ import MessagesModel.AttackedMessage;
 import MessagesModel.Message;
 import MessagesModel.ModelFactory;
 
-public class AttackedRegex 
+public class AttackedRegex implements IRegex
 {
-	private static Message message;
 	private static final String regex = "\"(?<attackerName>.*)[<](?<attackerUserId>\\d+)[>][<](?<attackerSteamId>.*)[>][<](?<attackerTeam>CT|TERRORIST|Unassigned|Spectator)[>]\" "
 			+ "\\[(?<attackerPosX>[\\-]?[0-9]+) (?<attackerPosY>[\\-]?[0-9]+) (?<attackerPosZ>[\\-]?[0-9]+)\\] attacked "
 			+ "\"(?<victimName>.*)[<](?<victimUserId>\\d+)[>][<](?<victimSteamId>.*)[>][<](?<victimTeam>CT|TERRORIST|Unassigned|Spectator)[>]\" "
@@ -18,41 +17,42 @@ public class AttackedRegex
 	
 	public AttackedRegex()
 	{
-		
+		RegexParser.getInstance().registerRegex(this);
 	}
-	
-	public static AttackedMessage getMessageObject(String input)
+
+	@Override
+	public Message tryCreatingMessage(String input) 
 	{
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(input);
-		AttackedMessage attackedMessage = null;
+		AttackedMessage message = null;
 		
-		if(m.matches())
+		if(m.find())
 		{
-			attackedMessage = ModelFactory.eINSTANCE.createAttackedMessage();
+			message = ModelFactory.eINSTANCE.createAttackedMessage();
 			
-			attackedMessage.setAttackerName(m.group("attackerName"));
-			attackedMessage.setAttackerUserID(m.group("attackerUserId"));
-			attackedMessage.setAttackerSteamID(m.group("attackerSteamId"));
-			attackedMessage.setAttackerTeam(m.group("attackerTeam"));
-			attackedMessage.setAttackerPosX(Integer.parseInt(m.group("attackerPosX")));
-			attackedMessage.setAttackerPosY(Integer.parseInt(m.group("attackerPosY")));
-			attackedMessage.setAttackerPosZ(Integer.parseInt(m.group("attackerPosZ")));
-			attackedMessage.setVictimName(m.group("victimName"));
-			attackedMessage.setVictimUserID(m.group("victimUserId"));
-			attackedMessage.setVictimSteamID(m.group("victimSteamId"));
-			attackedMessage.setVictimTeam(m.group("victimTeam"));
-			attackedMessage.setVictimPosX(Integer.parseInt(m.group("victimPosX")));
-			attackedMessage.setVictimPosY(Integer.parseInt(m.group("victimPosY")));
-			attackedMessage.setVictimPosZ(Integer.parseInt(m.group("victimPosZ")));
-			attackedMessage.setAttackerWeapon(m.group("attackerWeapon"));
-			attackedMessage.setAttackerDamage(Integer.parseInt(m.group("attackerDamage")));
-			attackedMessage.setAttackerDamageArmor(Integer.parseInt(m.group("attackerDamageArmor")));
-			attackedMessage.setVictimHealth(Integer.parseInt(m.group("victimHealth")));
-			attackedMessage.setVictimArmor(Integer.parseInt(m.group("victimArmor")));
-			attackedMessage.setAttackerHitGroup(m.group("attackerHitGroup"));
+			message.setAttackerName(m.group("attackerName"));
+			message.setAttackerUserID(m.group("attackerUserId"));
+			message.setAttackerSteamID(m.group("attackerSteamId"));
+			message.setAttackerTeam(m.group("attackerTeam"));
+			message.setAttackerPosX(Integer.parseInt(m.group("attackerPosX")));
+			message.setAttackerPosY(Integer.parseInt(m.group("attackerPosY")));
+			message.setAttackerPosZ(Integer.parseInt(m.group("attackerPosZ")));
+			message.setVictimName(m.group("victimName"));
+			message.setVictimUserID(m.group("victimUserId"));
+			message.setVictimSteamID(m.group("victimSteamId"));
+			message.setVictimTeam(m.group("victimTeam"));
+			message.setVictimPosX(Integer.parseInt(m.group("victimPosX")));
+			message.setVictimPosY(Integer.parseInt(m.group("victimPosY")));
+			message.setVictimPosZ(Integer.parseInt(m.group("victimPosZ")));
+			message.setAttackerWeapon(m.group("attackerWeapon"));
+			message.setAttackerDamage(Integer.parseInt(m.group("attackerDamage")));
+			message.setAttackerDamageArmor(Integer.parseInt(m.group("attackerDamageArmor")));
+			message.setVictimHealth(Integer.parseInt(m.group("victimHealth")));
+			message.setVictimArmor(Integer.parseInt(m.group("victimArmor")));
+			message.setAttackerHitGroup(m.group("attackerHitGroup"));
 		}
 		
-		return attackedMessage;
+		return message;
 	}
 }

@@ -2,12 +2,11 @@ package statsbot.messages.regex;
 
 import java.util.regex.*;
 
-import MessagesModel.AttackedMessage;
 import MessagesModel.KillMessage;
 import MessagesModel.Message;
 import MessagesModel.ModelFactory;
 
-public class KillRegex 
+public class KillRegex implements IRegex
 {
 	private static final String regex = "\"(?<userName>.+)[<](?<userId>\\d+)[>][<](?<userSteamId>.*)[>][<](?<userTeam>CT|TERRORIST|Unassigned|Spectator)[>]\" "
 			+ "\\[(?<killerPosX>[\\-]?[0-9]+) (?<killerPosY>[\\-]?[0-9]+) (?<killerPosZ>[\\-]?[0-9]+)\\] "
@@ -17,16 +16,17 @@ public class KillRegex
 
 	public KillRegex()
 	{
-		
+		RegexParser.getInstance().registerRegex(this);
 	}
-	
-	public static KillMessage getMessageObject(String input)
+
+	@Override
+	public Message tryCreatingMessage(String input)
 	{
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(input);
 		KillMessage message = null;
 		
-		if(m.matches())
+		if(m.find())
 		{
 			message = ModelFactory.eINSTANCE.createKillMessage();
 			

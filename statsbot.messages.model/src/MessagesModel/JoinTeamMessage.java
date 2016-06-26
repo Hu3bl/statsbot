@@ -15,7 +15,7 @@ package MessagesModel;
  *   <li>{@link MessagesModel.JoinTeamMessage#getUserID <em>User ID</em>}</li>
  *   <li>{@link MessagesModel.JoinTeamMessage#getUserName <em>User Name</em>}</li>
  *   <li>{@link MessagesModel.JoinTeamMessage#getUserTeam <em>User Team</em>}</li>
- *   <li>{@link MessagesModel.JoinTeamMessage#getUserStreamID <em>User Stream ID</em>}</li>
+ *   <li>{@link MessagesModel.JoinTeamMessage#getUserSteamID <em>User Steam ID</em>}</li>
  *   <li>{@link MessagesModel.JoinTeamMessage#getJoinedTeam <em>Joined Team</em>}</li>
  * </ul>
  *
@@ -103,30 +103,30 @@ public interface JoinTeamMessage extends Message {
 	void setUserTeam(String value);
 
 	/**
-	 * Returns the value of the '<em><b>User Stream ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>User Steam ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>User Stream ID</em>' attribute isn't clear,
+	 * If the meaning of the '<em>User Steam ID</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Stream ID</em>' attribute.
-	 * @see #setUserStreamID(String)
-	 * @see MessagesModel.ModelPackage#getJoinTeamMessage_UserStreamID()
+	 * @return the value of the '<em>User Steam ID</em>' attribute.
+	 * @see #setUserSteamID(String)
+	 * @see MessagesModel.ModelPackage#getJoinTeamMessage_UserSteamID()
 	 * @model
 	 * @generated
 	 */
-	String getUserStreamID();
+	String getUserSteamID();
 
 	/**
-	 * Sets the value of the '{@link MessagesModel.JoinTeamMessage#getUserStreamID <em>User Stream ID</em>}' attribute.
+	 * Sets the value of the '{@link MessagesModel.JoinTeamMessage#getUserSteamID <em>User Steam ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Stream ID</em>' attribute.
-	 * @see #getUserStreamID()
+	 * @param value the new value of the '<em>User Steam ID</em>' attribute.
+	 * @see #getUserSteamID()
 	 * @generated
 	 */
-	void setUserStreamID(String value);
+	void setUserSteamID(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Joined Team</b></em>' attribute.
