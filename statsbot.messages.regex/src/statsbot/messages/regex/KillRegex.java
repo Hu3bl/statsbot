@@ -13,6 +13,8 @@ public class KillRegex implements IRegex
 			+ "killed \"(?<killedUserName>.+)[<](?<killedUserId>\\d+)[>][<](?<killedSteamId>.*)[>][<](?<killedUserTeam>CT|TERRORIST|Unassigned|Spectator)[>]\" "
 			+ "\\[(?<killedPosX>[\\-]?[0-9]+) (?<killedPosY>[\\-]?[0-9]+) (?<killedPosZ>[\\-]?[0-9]+)\\] "
 			+ "with \"(?<weapon>[a-zA-Z0-9_]+)\"(?<headshot>.*)";
+	
+	private static final String headshotRegex = "\\(headshot\\)";
 
 	public KillRegex()
 	{
@@ -45,8 +47,10 @@ public class KillRegex implements IRegex
 			message.setKilledPosY(Integer.parseInt(m.group("killedPosY")));
 			message.setKilledPosZ(Integer.parseInt(m.group("killedPosZ")));
 			message.setWeapon(m.group("weapon"));
-			// There is a space in front of (headshot). This needs to be considered here
-			if(m.group("headshot").equals(" (headshot)"))
+			
+			Pattern headshotPattern = Pattern.compile(headshotRegex);
+			Matcher headshotMatcher = headshotPattern.matcher(m.group("headshot"));
+			if (headshotMatcher.find())
 			{
 				message.setHeadshot(true);
 			}
@@ -54,6 +58,7 @@ public class KillRegex implements IRegex
 			{
 				message.setHeadshot(false);
 			}
+			
 		}
 		
 		return message;

@@ -61,25 +61,43 @@ public class MessageTest {
 	@Test
 	public void CheckKillRegex_KillMessageWithoutHeadshotAsInput_ExpectedCorrectConstructionOfObject() 
 	{
-		String input = "\"Hu3bl<2><STEAM_1:1:10481859><TERRORIST>\" [88 2512 -127] killed \"Nate<10><BOT><CT>\" [382 2102 -62] with \"ak47\"";
-				
+		//String input = "\"Hu3bl<2><STEAM_1:1:10481859><TERRORIST>\" [88 2512 -127] killed \"Nate<10><BOT><CT>\" [382 2102 -62] with \"ak47\"";
+		String input = "\"Hu3bl<2><STEAM_1:1:10481859><TERRORIST>\" [87 -591 2] killed \"Grant<3><BOT><CT>\" [554 -53 78] with \"ssg08\"";
+		
 		KillMessage message = (KillMessage) new KillRegex().tryCreatingMessage(input);
+		
+//		assertEquals("Hu3bl", message.getUserName());
+//		assertEquals("2", message.getUserID());
+//		assertEquals("STEAM_1:1:10481859", message.getUserSteamID());
+//		assertEquals("TERRORIST", message.getUserTeam());
+//		assertEquals(88, message.getKillerPosX());
+//		assertEquals(2512, message.getKillerPosY());
+//		assertEquals(-127, message.getKillerPosZ());
+//		assertEquals("Nate", message.getKilledUserName());
+//		assertEquals("10", message.getKilledUserID());
+//		assertEquals("BOT", message.getKilledUserSteamID());
+//		assertEquals("CT", message.getKilledUserTeam());
+//		assertEquals(382, message.getKilledPosX());
+//		assertEquals(2102, message.getKilledPosY());
+//		assertEquals(-62, message.getKilledPosZ());
+//		assertEquals("ak47", message.getWeapon());
+//		assertEquals(false, message.isHeadshot());
 		
 		assertEquals("Hu3bl", message.getUserName());
 		assertEquals("2", message.getUserID());
 		assertEquals("STEAM_1:1:10481859", message.getUserSteamID());
 		assertEquals("TERRORIST", message.getUserTeam());
-		assertEquals(88, message.getKillerPosX());
-		assertEquals(2512, message.getKillerPosY());
-		assertEquals(-127, message.getKillerPosZ());
-		assertEquals("Nate", message.getKilledUserName());
-		assertEquals("10", message.getKilledUserID());
+		assertEquals(87, message.getKillerPosX());
+		assertEquals(-591, message.getKillerPosY());
+		assertEquals(2, message.getKillerPosZ());
+		assertEquals("Grant", message.getKilledUserName());
+		assertEquals("3", message.getKilledUserID());
 		assertEquals("BOT", message.getKilledUserSteamID());
 		assertEquals("CT", message.getKilledUserTeam());
-		assertEquals(382, message.getKilledPosX());
-		assertEquals(2102, message.getKilledPosY());
-		assertEquals(-62, message.getKilledPosZ());
-		assertEquals("ak47", message.getWeapon());
+		assertEquals(554, message.getKilledPosX());
+		assertEquals(-53, message.getKilledPosY());
+		assertEquals(78, message.getKilledPosZ());
+		assertEquals("ssg08", message.getWeapon());
 		assertEquals(false, message.isHeadshot());
 	}
 	

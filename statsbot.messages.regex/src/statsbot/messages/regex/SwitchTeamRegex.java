@@ -8,7 +8,7 @@ import MessagesModel.SwitchTeamMessage;
 
 public class SwitchTeamRegex implements IRegex
 {
-	private static final String regex = "\"(?<userName>.+)[<](?<userId>\\d+)[>][<](?<userSteamId>.*)[>]\" switched from team [<](?<userTeam>CT|TERRORIST|Unassigned|Spectator)[>] to [<](?<newTeam>CT|TERRORIST|Unassigned|Spectator)[>]";
+	private static final String regex = "\"(?<userName>.+)[<](?<userId>\\d+)[>][<](?<userSteamId>.*)[>]\" switched from team [<](?<userTeam>CT|TERRORIST|Unassigned|Spectator)[>] to [<](?<switchedTeam>CT|TERRORIST|Unassigned|Spectator)[>]";
 
 	public SwitchTeamRegex()
 	{

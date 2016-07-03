@@ -1,5 +1,8 @@
 package statsbot.core.main;
 
+import java.util.concurrent.LinkedBlockingQueue;
+
+import statsbot.core.udp.parser.UDPParser;
 import statsbot.core.udp.server.UDPServer;
 import statsbot.messages.regex.AttackedRegex;
 import statsbot.messages.regex.BombDefusingRegex;
@@ -12,6 +15,7 @@ import statsbot.messages.regex.EnteredTheGameRegex;
 import statsbot.messages.regex.GotTheBombRegex;
 import statsbot.messages.regex.JoinTeamRegex;
 import statsbot.messages.regex.KillAssistRegex;
+import statsbot.messages.regex.KillRegex;
 import statsbot.messages.regex.PurchasedRegex;
 import statsbot.messages.regex.RoundEndRegex;
 import statsbot.messages.regex.RoundRestartRegex;
@@ -25,34 +29,69 @@ import statsbot.messages.regex.ThrewStuffRegex;
 
 public class Main 
 {
-	private static final String input = "\"Hu3bl<2><STEAM_1:1:10481859><TERRORIST>\" [88 2512 -127] attacked \"Nate<10><BOT><CT>\" [382 2102 -126] with \"ak47\" (damage \"109\") (damage_armor \"15\") (health \"0\") (armor \"84\") (hitgroup \"head\")";
+	private static LinkedBlockingQueue<byte[]> buffer = new LinkedBlockingQueue<byte[]>();
 	
 	public static void main( String args[] )
 	{
-		AttackedRegex attackedRegex = new AttackedRegex();
-		BombDefusingRegex bombDefusingRegex = new BombDefusingRegex();
-		BombPlantingRegex bombPlantingRegex = new BombPlantingRegex();
-		ChangeMapRegex changeMapRegex = new ChangeMapRegex();
-		ChangeNameRegex changeNameRegex = new ChangeNameRegex();
-		ConnectedRegex ConnectedRegex = new ConnectedRegex();
-		DisconnectedRegex disconnectedRegex = new DisconnectedRegex();
-		EnteredTheGameRegex enteredTheGameRegex = new EnteredTheGameRegex();
-		GotTheBombRegex gotTheBombRegex = new GotTheBombRegex();
-		JoinTeamRegex joinTeamRegex = new JoinTeamRegex();
-		KillAssistRegex killAssistRegex = new KillAssistRegex();
-		PurchasedRegex purchasedRegex = new PurchasedRegex();
-		RoundEndRegex roundEndRegex = new RoundEndRegex();
-		RoundRestartRegex roundRestartRegex = new RoundRestartRegex();
-		RoundScoredRegex roundScoredRegex = new RoundScoredRegex();
-		RoundStartRegex roundStartRegex = new RoundStartRegex();
-		SayRegex sayRegex = new SayRegex();
-		SayTeamRegex sayTeamRegex = new SayTeamRegex();
-		SwitchTeamRegex switchTeamRegex = new SwitchTeamRegex();
-		TeamScoredRegex teamScoredRegex = new TeamScoredRegex();
-		ThrewStuffRegex threwStuffRegex = new ThrewStuffRegex();
+		initializeRegexObjects();
 		
-		UDPServer listener = new UDPServer(1337);
-		listener.startListening();
+		// create a thread for UDPServer to receive the messages
+		Thread serverThread = new Thread(new UDPServer(1337, buffer));
+		serverThread.setDaemon(true);
+		serverThread.start();
+				
+		byte[] receivedData = null;
+		UDPParser parser = new UDPParser();
+		
+		while(true)
+		{
+			try
+			{
+				receivedData = buffer.take();
+			} 
+			catch (InterruptedException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			if(parser.parseData(new String(receivedData)))
+			{
+				System.out.print("success " + new String(receivedData));
+			}
+			else
+			{
+				System.out.print("error " + new String(receivedData));
+			}
+			
+		}
+	}
+	
+	public static void initializeRegexObjects()
+	{
+		// the created instances will register themselves in the RegexParser
+		new AttackedRegex();
+		new BombDefusingRegex();
+		new BombPlantingRegex();
+		new ChangeMapRegex();
+		new ChangeNameRegex();
+		new ConnectedRegex();
+		new DisconnectedRegex();
+		new EnteredTheGameRegex();
+		new GotTheBombRegex();
+		new JoinTeamRegex();
+		new KillRegex();
+		new KillAssistRegex();
+		new PurchasedRegex();
+		new RoundEndRegex();
+		new RoundRestartRegex();
+		new RoundScoredRegex();
+		new RoundStartRegex();
+		new SayRegex();
+		new SayTeamRegex();
+		new SwitchTeamRegex();
+		new TeamScoredRegex();
+		new ThrewStuffRegex();
 	}
 	
 	

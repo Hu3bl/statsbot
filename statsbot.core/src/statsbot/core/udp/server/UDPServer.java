@@ -3,16 +3,17 @@ package statsbot.core.udp.server;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
+import java.util.concurrent.BlockingQueue;
 
-import statsbot.core.udp.parser.UDPParser;
-
-public class UDPServer 
+public class UDPServer implements Runnable
 {
-	DatagramSocket socket = null;
-	private final static int PACKETSIZE = 3000 ;
+	private final static int PACKETSIZE = 1500;
+	private DatagramSocket socket = null;
+	private BlockingQueue<byte[]> buffer = null;
 	
-	public UDPServer(int port)
+	public UDPServer(int port, BlockingQueue<byte[]> buffer)
 	{
+		this.buffer = buffer;
 		try 
 		{
 			socket = new DatagramSocket(port);
@@ -24,9 +25,14 @@ public class UDPServer
 		System.out.println("Opened DatagramSocket on port " + port);
 	}
 	
-	public void startListening()
+	@Override
+	public void run()
 	{
-		UDPParser parser = new UDPParser();
+		startListening();
+	}
+	
+	private void startListening()
+	{
 		try
 		{
 			while(true)
@@ -35,20 +41,10 @@ public class UDPServer
 	            DatagramPacket packet = new DatagramPacket(new byte[PACKETSIZE], PACKETSIZE ) ;
 
 	            // Receive a packet (blocking)
-	            socket.receive( packet ) ;
+	            socket.receive(packet) ;
 
-	            // Print the packet
-	            System.out.println(new String(packet.getData()));
-	            
-	            // Process the packet
-	            if(parser.parseData(new String(packet.getData())))
-	            {
-	            	System.out.println("true");
-	            }
-	            else
-	            {
-	            	System.out.println("false");
-	            }
+	            // Put the packet into queue
+	            this.buffer.put(packet.getData());
 	        }  
 		}
 		catch (Exception e)
