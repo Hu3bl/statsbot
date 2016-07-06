@@ -1031,6 +1031,15 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getKillMessage_Penetrated() {
+		return (EAttribute)killMessageEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getKillAssistMessage() {
 		return killAssistMessageEClass;
 	}
@@ -1705,6 +1714,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(killMessageEClass, KILL_MESSAGE__KILLED_POS_Z);
 		createEAttribute(killMessageEClass, KILL_MESSAGE__WEAPON);
 		createEAttribute(killMessageEClass, KILL_MESSAGE__HEADSHOT);
+		createEAttribute(killMessageEClass, KILL_MESSAGE__PENETRATED);
 
 		killAssistMessageEClass = createEClass(KILL_ASSIST_MESSAGE);
 		createEAttribute(killAssistMessageEClass, KILL_ASSIST_MESSAGE__USER_ID);
@@ -1930,6 +1940,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getKillMessage_KilledPosZ(), ecorePackage.getEInt(), "killedPosZ", null, 0, 1, KillMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKillMessage_Weapon(), ecorePackage.getEString(), "weapon", null, 0, 1, KillMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getKillMessage_Headshot(), ecorePackage.getEBoolean(), "headshot", null, 0, 1, KillMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKillMessage_Penetrated(), ecorePackage.getEBoolean(), "penetrated", null, 0, 1, KillMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(killAssistMessageEClass, KillAssistMessage.class, "KillAssistMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKillAssistMessage_UserID(), ecorePackage.getEString(), "userID", null, 0, 1, KillAssistMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

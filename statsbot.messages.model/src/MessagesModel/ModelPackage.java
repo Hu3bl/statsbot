@@ -1005,13 +1005,22 @@ public interface ModelPackage extends EPackage {
 	int KILL_MESSAGE__HEADSHOT = MESSAGE_FEATURE_COUNT + 15;
 
 	/**
+	 * The feature id for the '<em><b>Penetrated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KILL_MESSAGE__PENETRATED = MESSAGE_FEATURE_COUNT + 16;
+
+	/**
 	 * The number of structural features of the '<em>Kill Message</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KILL_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 16;
+	int KILL_MESSAGE_FEATURE_COUNT = MESSAGE_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>Kill Message</em>' class.
@@ -2739,6 +2748,17 @@ public interface ModelPackage extends EPackage {
 	EAttribute getKillMessage_Headshot();
 
 	/**
+	 * Returns the meta object for the attribute '{@link MessagesModel.KillMessage#isPenetrated <em>Penetrated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Penetrated</em>'.
+	 * @see MessagesModel.KillMessage#isPenetrated()
+	 * @see #getKillMessage()
+	 * @generated
+	 */
+	EAttribute getKillMessage_Penetrated();
+
+	/**
 	 * Returns the meta object for class '{@link MessagesModel.KillAssistMessage <em>Kill Assist Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4108,6 +4128,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute KILL_MESSAGE__HEADSHOT = eINSTANCE.getKillMessage_Headshot();
+
+		/**
+		 * The meta object literal for the '<em><b>Penetrated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KILL_MESSAGE__PENETRATED = eINSTANCE.getKillMessage_Penetrated();
 
 		/**
 		 * The meta object literal for the '{@link MessagesModel.impl.KillAssistMessageImpl <em>Kill Assist Message</em>}' class.

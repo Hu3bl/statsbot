@@ -98,6 +98,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//KillMessage/killedPosZ"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//KillMessage/weapon"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//KillMessage/headshot"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//KillMessage/penetrated"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//KillAssistMessage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//KillAssistMessage/userID"/>
@@ -145,7 +146,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SwitchTeamMessage/userID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SwitchTeamMessage/userName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SwitchTeamMessage/userTeam"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SwitchTeamMessage/userStreamID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SwitchTeamMessage/userSteamID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SwitchTeamMessage/switchedTeam"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//TeamScoredMessage">

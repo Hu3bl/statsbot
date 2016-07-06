@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link MessagesModel.impl.KillMessageImpl#getKilledPosZ <em>Killed Pos Z</em>}</li>
  *   <li>{@link MessagesModel.impl.KillMessageImpl#getWeapon <em>Weapon</em>}</li>
  *   <li>{@link MessagesModel.impl.KillMessageImpl#isHeadshot <em>Headshot</em>}</li>
+ *   <li>{@link MessagesModel.impl.KillMessageImpl#isPenetrated <em>Penetrated</em>}</li>
  * </ul>
  *
  * @generated
@@ -359,6 +360,26 @@ public class KillMessageImpl extends MessageImpl implements KillMessage {
 	 * @ordered
 	 */
 	protected boolean headshot = HEADSHOT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isPenetrated() <em>Penetrated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPenetrated()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean PENETRATED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isPenetrated() <em>Penetrated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPenetrated()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean penetrated = PENETRATED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -720,6 +741,27 @@ public class KillMessageImpl extends MessageImpl implements KillMessage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isPenetrated() {
+		return penetrated;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPenetrated(boolean newPenetrated) {
+		boolean oldPenetrated = penetrated;
+		penetrated = newPenetrated;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.KILL_MESSAGE__PENETRATED, oldPenetrated, penetrated));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -755,6 +797,8 @@ public class KillMessageImpl extends MessageImpl implements KillMessage {
 				return getWeapon();
 			case ModelPackage.KILL_MESSAGE__HEADSHOT:
 				return isHeadshot();
+			case ModelPackage.KILL_MESSAGE__PENETRATED:
+				return isPenetrated();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -814,6 +858,9 @@ public class KillMessageImpl extends MessageImpl implements KillMessage {
 				return;
 			case ModelPackage.KILL_MESSAGE__HEADSHOT:
 				setHeadshot((Boolean)newValue);
+				return;
+			case ModelPackage.KILL_MESSAGE__PENETRATED:
+				setPenetrated((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -875,6 +922,9 @@ public class KillMessageImpl extends MessageImpl implements KillMessage {
 			case ModelPackage.KILL_MESSAGE__HEADSHOT:
 				setHeadshot(HEADSHOT_EDEFAULT);
 				return;
+			case ModelPackage.KILL_MESSAGE__PENETRATED:
+				setPenetrated(PENETRATED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -919,6 +969,8 @@ public class KillMessageImpl extends MessageImpl implements KillMessage {
 				return WEAPON_EDEFAULT == null ? weapon != null : !WEAPON_EDEFAULT.equals(weapon);
 			case ModelPackage.KILL_MESSAGE__HEADSHOT:
 				return headshot != HEADSHOT_EDEFAULT;
+			case ModelPackage.KILL_MESSAGE__PENETRATED:
+				return penetrated != PENETRATED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -965,6 +1017,8 @@ public class KillMessageImpl extends MessageImpl implements KillMessage {
 		result.append(weapon);
 		result.append(", headshot: ");
 		result.append(headshot);
+		result.append(", penetrated: ");
+		result.append(penetrated);
 		result.append(')');
 		return result.toString();
 	}

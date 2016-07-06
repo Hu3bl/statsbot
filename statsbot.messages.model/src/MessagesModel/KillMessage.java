@@ -28,6 +28,7 @@ package MessagesModel;
  *   <li>{@link MessagesModel.KillMessage#getKilledPosZ <em>Killed Pos Z</em>}</li>
  *   <li>{@link MessagesModel.KillMessage#getWeapon <em>Weapon</em>}</li>
  *   <li>{@link MessagesModel.KillMessage#isHeadshot <em>Headshot</em>}</li>
+ *   <li>{@link MessagesModel.KillMessage#isPenetrated <em>Penetrated</em>}</li>
  * </ul>
  *
  * @see MessagesModel.ModelPackage#getKillMessage()
@@ -450,5 +451,31 @@ public interface KillMessage extends Message {
 	 * @generated
 	 */
 	void setHeadshot(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Penetrated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Penetrated</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Penetrated</em>' attribute.
+	 * @see #setPenetrated(boolean)
+	 * @see MessagesModel.ModelPackage#getKillMessage_Penetrated()
+	 * @model
+	 * @generated
+	 */
+	boolean isPenetrated();
+
+	/**
+	 * Sets the value of the '{@link MessagesModel.KillMessage#isPenetrated <em>Penetrated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Penetrated</em>' attribute.
+	 * @see #isPenetrated()
+	 * @generated
+	 */
+	void setPenetrated(boolean value);
 
 } // KillMessage

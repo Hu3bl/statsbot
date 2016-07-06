@@ -12,9 +12,10 @@ public class KillRegex implements IRegex
 			+ "\\[(?<killerPosX>[\\-]?[0-9]+) (?<killerPosY>[\\-]?[0-9]+) (?<killerPosZ>[\\-]?[0-9]+)\\] "
 			+ "killed \"(?<killedUserName>.+)[<](?<killedUserId>\\d+)[>][<](?<killedSteamId>.*)[>][<](?<killedUserTeam>CT|TERRORIST|Unassigned|Spectator)[>]\" "
 			+ "\\[(?<killedPosX>[\\-]?[0-9]+) (?<killedPosY>[\\-]?[0-9]+) (?<killedPosZ>[\\-]?[0-9]+)\\] "
-			+ "with \"(?<weapon>[a-zA-Z0-9_]+)\"(?<headshot>.*)";
+			+ "with \"(?<weapon>[a-zA-Z0-9_]+)\"(?<headshotOrPenetrated>.*)";
 	
 	private static final String headshotRegex = "\\(headshot\\)";
+	private static final String penetratedRegex = "\\(penetrated\\)";
 
 	public KillRegex()
 	{
@@ -49,7 +50,7 @@ public class KillRegex implements IRegex
 			message.setWeapon(m.group("weapon"));
 			
 			Pattern headshotPattern = Pattern.compile(headshotRegex);
-			Matcher headshotMatcher = headshotPattern.matcher(m.group("headshot"));
+			Matcher headshotMatcher = headshotPattern.matcher(m.group("headshotOrPenetrated"));
 			if (headshotMatcher.find())
 			{
 				message.setHeadshot(true);
@@ -57,6 +58,17 @@ public class KillRegex implements IRegex
 			else
 			{
 				message.setHeadshot(false);
+			}
+			
+			Pattern penetratedPattern = Pattern.compile(penetratedRegex);
+			Matcher penetratedMatcher = penetratedPattern.matcher(m.group("headshotOrPenetrated"));
+			if (penetratedMatcher.find())
+			{
+				message.setPenetrated(true);
+			}
+			else
+			{
+				message.setPenetrated(false);
 			}
 			
 		}

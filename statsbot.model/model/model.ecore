@@ -36,10 +36,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Weapon"/>
   <eClassifiers xsi:type="ecore:EEnum" name="RoundWinType">
     <eLiterals name="Elimination"/>
-    <eLiterals name="BombExplode" literal=""/>
-    <eLiterals name="BombDefuse" literal=""/>
-    <eLiterals name="TimeExpired"/>
-    <eLiterals name="HostageRescue"/>
+    <eLiterals name="BombExplode" value="1" literal=""/>
+    <eLiterals name="BombDefuse" value="2" literal=""/>
+    <eLiterals name="TimeExpired" value="3"/>
+    <eLiterals name="HostageRescue" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoundEvents" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Buy" eSuperTypes="#//RoundEvents">
