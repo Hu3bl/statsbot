@@ -4,28 +4,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 import statsbot.core.udp.parser.UDPParser;
 import statsbot.core.udp.server.UDPServer;
-import statsbot.messages.regex.AttackedRegex;
-import statsbot.messages.regex.BombDefusingRegex;
-import statsbot.messages.regex.BombPlantingRegex;
-import statsbot.messages.regex.ChangeMapRegex;
-import statsbot.messages.regex.ChangeNameRegex;
-import statsbot.messages.regex.ConnectedRegex;
-import statsbot.messages.regex.DisconnectedRegex;
-import statsbot.messages.regex.EnteredTheGameRegex;
-import statsbot.messages.regex.GotTheBombRegex;
-import statsbot.messages.regex.JoinTeamRegex;
-import statsbot.messages.regex.KillAssistRegex;
-import statsbot.messages.regex.KillRegex;
-import statsbot.messages.regex.PurchasedRegex;
-import statsbot.messages.regex.RoundEndRegex;
-import statsbot.messages.regex.RoundRestartRegex;
-import statsbot.messages.regex.RoundScoredRegex;
-import statsbot.messages.regex.RoundStartRegex;
-import statsbot.messages.regex.SayRegex;
-import statsbot.messages.regex.SayTeamRegex;
-import statsbot.messages.regex.SwitchTeamRegex;
-import statsbot.messages.regex.TeamScoredRegex;
-import statsbot.messages.regex.ThrewStuffRegex;
+import statsbot.messages.regex.RegexInitializer;
 
 public class Main 
 {
@@ -33,7 +12,7 @@ public class Main
 	//private final static Logger log = LogManager.getLogger(Main.class);
 	public static void main(String args[])
 	{
-		initializeRegexObjects();
+		RegexInitializer.initializeRegexObjects();
 		
 		// create a thread for UDPServer to receive the messages
 		Thread serverThread = new Thread(new UDPServer(1337, buffer));
@@ -65,33 +44,4 @@ public class Main
 			}		
 		}
 	}
-	
-	public static void initializeRegexObjects()
-	{
-		// the created instances will register themselves in the RegexParser
-		new AttackedRegex();
-		new BombDefusingRegex();
-		new BombPlantingRegex();
-		new ChangeMapRegex();
-		new ChangeNameRegex();
-		new ConnectedRegex();
-		new DisconnectedRegex();
-		new EnteredTheGameRegex();
-		new GotTheBombRegex();
-		new JoinTeamRegex();
-		new KillRegex();
-		new KillAssistRegex();
-		new PurchasedRegex();
-		new RoundEndRegex();
-		new RoundRestartRegex();
-		new RoundScoredRegex();
-		new RoundStartRegex();
-		new SayRegex();
-		new SayTeamRegex();
-		new SwitchTeamRegex();
-		new TeamScoredRegex();
-		new ThrewStuffRegex();
-	}
-	
-	
 }
