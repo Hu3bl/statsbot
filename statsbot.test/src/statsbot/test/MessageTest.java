@@ -61,27 +61,9 @@ public class MessageTest {
 	@Test
 	public void CheckKillRegex_KillMessageWithoutHeadshotAsInput_ExpectedCorrectConstructionOfObject() 
 	{
-		//String input = "\"Hu3bl<2><STEAM_1:1:10481859><TERRORIST>\" [88 2512 -127] killed \"Nate<10><BOT><CT>\" [382 2102 -62] with \"ak47\"";
 		String input = "\"Hu3bl<2><STEAM_1:1:10481859><TERRORIST>\" [87 -591 2] killed \"Grant<3><BOT><CT>\" [554 -53 78] with \"ssg08\"";
 		
 		KillMessage message = (KillMessage) new KillRegex().tryCreatingMessage(input);
-		
-//		assertEquals("Hu3bl", message.getUserName());
-//		assertEquals("2", message.getUserID());
-//		assertEquals("STEAM_1:1:10481859", message.getUserSteamID());
-//		assertEquals("TERRORIST", message.getUserTeam());
-//		assertEquals(88, message.getKillerPosX());
-//		assertEquals(2512, message.getKillerPosY());
-//		assertEquals(-127, message.getKillerPosZ());
-//		assertEquals("Nate", message.getKilledUserName());
-//		assertEquals("10", message.getKilledUserID());
-//		assertEquals("BOT", message.getKilledUserSteamID());
-//		assertEquals("CT", message.getKilledUserTeam());
-//		assertEquals(382, message.getKilledPosX());
-//		assertEquals(2102, message.getKilledPosY());
-//		assertEquals(-62, message.getKilledPosZ());
-//		assertEquals("ak47", message.getWeapon());
-//		assertEquals(false, message.isHeadshot());
 		
 		assertEquals("Hu3bl", message.getUserName());
 		assertEquals("2", message.getUserID());
@@ -99,6 +81,7 @@ public class MessageTest {
 		assertEquals(78, message.getKilledPosZ());
 		assertEquals("ssg08", message.getWeapon());
 		assertEquals(false, message.isHeadshot());
+		assertEquals(false, message.isPenetrated());
 	}
 	
 	@Test
@@ -124,6 +107,59 @@ public class MessageTest {
 		assertEquals(-62, message.getKilledPosZ());
 		assertEquals("ak47", message.getWeapon());
 		assertEquals(true, message.isHeadshot());
+		assertEquals(false, message.isPenetrated());
+	}
+	
+	@Test
+	public void CheckKillRegex_KillMessageWithPenetradedAsInput_ExpectedCorrectConstructionOfObject() 
+	{
+		String input = "\"Adam<6><BOT><TERRORIST>\" [-1582 2627 2] killed \"Bill<7><BOT><CT>\" [-1267 2670 185] with \"galilar\" (penetrated)";
+				
+		KillMessage message = (KillMessage) new KillRegex().tryCreatingMessage(input);
+		
+		assertEquals("Adam", message.getUserName());
+		assertEquals("6", message.getUserID());
+		assertEquals("BOT", message.getUserSteamID());
+		assertEquals("TERRORIST", message.getUserTeam());
+		assertEquals(-1582, message.getKillerPosX());
+		assertEquals(2627, message.getKillerPosY());
+		assertEquals(2, message.getKillerPosZ());
+		assertEquals("Bill", message.getKilledUserName());
+		assertEquals("7", message.getKilledUserID());
+		assertEquals("BOT", message.getKilledUserSteamID());
+		assertEquals("CT", message.getKilledUserTeam());
+		assertEquals(-1267, message.getKilledPosX());
+		assertEquals(2670, message.getKilledPosY());
+		assertEquals(185, message.getKilledPosZ());
+		assertEquals("galilar", message.getWeapon());
+		assertEquals(false, message.isHeadshot());
+		assertEquals(true, message.isPenetrated());
+	}
+	
+	@Test
+	public void CheckKillRegex_KillMessageWithHeadshotPenetratedAsInput_ExpectedCorrectConstructionOfObject() 
+	{
+		String input = "\"Hu3bl<2><STEAM_1:1:10481859><TERRORIST>\" [-450 1384 -124] killed \"Wade<5><BOT><CT>\" [-364 2335 -48] with \"awp\" (headshot penetrated)";
+				
+		KillMessage message = (KillMessage) new KillRegex().tryCreatingMessage(input);
+		
+		assertEquals("Hu3bl", message.getUserName());
+		assertEquals("2", message.getUserID());
+		assertEquals("STEAM_1:1:10481859", message.getUserSteamID());
+		assertEquals("TERRORIST", message.getUserTeam());
+		assertEquals(-450, message.getKillerPosX());
+		assertEquals(1384, message.getKillerPosY());
+		assertEquals(-124, message.getKillerPosZ());
+		assertEquals("Wade", message.getKilledUserName());
+		assertEquals("5", message.getKilledUserID());
+		assertEquals("BOT", message.getKilledUserSteamID());
+		assertEquals("CT", message.getKilledUserTeam());
+		assertEquals(-364, message.getKilledPosX());
+		assertEquals(2335, message.getKilledPosY());
+		assertEquals(-48, message.getKilledPosZ());
+		assertEquals("awp", message.getWeapon());
+		assertEquals(true, message.isHeadshot());
+		assertEquals(true, message.isPenetrated());
 	}
 	
 	@Test

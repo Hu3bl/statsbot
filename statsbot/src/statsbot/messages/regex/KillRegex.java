@@ -14,8 +14,8 @@ public class KillRegex implements IRegex
 			+ "\\[(?<killedPosX>[\\-]?[0-9]+) (?<killedPosY>[\\-]?[0-9]+) (?<killedPosZ>[\\-]?[0-9]+)\\] "
 			+ "with \"(?<weapon>[a-zA-Z0-9_]+)\"(?<headshotOrPenetrated>.*)";
 	
-	private static final String headshotRegex = "\\(headshot\\)";
-	private static final String penetratedRegex = "\\(penetrated\\)";
+	private static final String headshotRegex = "\\(.*headshot.*\\)";
+	private static final String penetratedRegex = "\\(.*penetrated.*\\)";
 
 	public KillRegex()
 	{

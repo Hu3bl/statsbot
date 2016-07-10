@@ -30,8 +30,8 @@ import statsbot.messages.regex.ThrewStuffRegex;
 public class Main 
 {
 	private static LinkedBlockingQueue<byte[]> buffer = new LinkedBlockingQueue<byte[]>();
-	
-	public static void main( String args[] )
+	//private final static Logger log = LogManager.getLogger(Main.class);
+	public static void main(String args[])
 	{
 		initializeRegexObjects();
 		
@@ -62,8 +62,7 @@ public class Main
 			else
 			{
 				System.out.print("error " + new String(receivedData));
-			}
-			
+			}		
 		}
 	}
 	
