@@ -23,7 +23,6 @@ package MessagesModel;
  * @generated
  */
 public interface GotTheBombMessage extends Message {
-
 	/**
 	 * Returns the value of the '<em><b>User Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -127,4 +126,5 @@ public interface GotTheBombMessage extends Message {
 	 * @generated
 	 */
 	void setUserID(String value);
+
 } // GotTheBombMessage

@@ -6,7 +6,9 @@ import MessagesModel.GotTheBombMessage;
 import MessagesModel.ModelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -35,6 +37,7 @@ public class GotTheBombMessageImpl extends MessageImpl implements GotTheBombMess
 	 * @ordered
 	 */
 	protected static final String USER_NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getUserName() <em>User Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -44,6 +47,7 @@ public class GotTheBombMessageImpl extends MessageImpl implements GotTheBombMess
 	 * @ordered
 	 */
 	protected String userName = USER_NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getUserTeam() <em>User Team</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,6 +57,7 @@ public class GotTheBombMessageImpl extends MessageImpl implements GotTheBombMess
 	 * @ordered
 	 */
 	protected static final String USER_TEAM_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getUserTeam() <em>User Team</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -62,6 +67,7 @@ public class GotTheBombMessageImpl extends MessageImpl implements GotTheBombMess
 	 * @ordered
 	 */
 	protected String userTeam = USER_TEAM_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getUserSteamID() <em>User Steam ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,6 +77,7 @@ public class GotTheBombMessageImpl extends MessageImpl implements GotTheBombMess
 	 * @ordered
 	 */
 	protected static final String USER_STEAM_ID_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getUserSteamID() <em>User Steam ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,6 +87,7 @@ public class GotTheBombMessageImpl extends MessageImpl implements GotTheBombMess
 	 * @ordered
 	 */
 	protected String userSteamID = USER_STEAM_ID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getUserID() <em>User ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -89,6 +97,7 @@ public class GotTheBombMessageImpl extends MessageImpl implements GotTheBombMess
 	 * @ordered
 	 */
 	protected static final String USER_ID_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getUserID() <em>User ID</em>}' attribute.
 	 * <!-- begin-user-doc -->

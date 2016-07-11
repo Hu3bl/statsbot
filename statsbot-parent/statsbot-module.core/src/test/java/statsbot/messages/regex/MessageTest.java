@@ -1,4 +1,4 @@
-package statsbot.test;
+package statsbot.messages.regex;
 
 import static org.junit.Assert.*;
 

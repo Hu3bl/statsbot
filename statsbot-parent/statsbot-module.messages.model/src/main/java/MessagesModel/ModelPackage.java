@@ -1782,7 +1782,6 @@ public interface ModelPackage extends EPackage {
 	 */
 	int MESSAGE_BUFFER_OPERATION_COUNT = 0;
 
-
 	/**
 	 * The meta object id for the '{@link MessagesModel.impl.SayTeamMessageImpl <em>Say Team Message</em>}' class.
 	 * <!-- begin-user-doc -->
