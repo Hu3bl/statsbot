@@ -9,6 +9,7 @@ import statsbot.messages.regex.RegexInitializer;
 public class Main 
 {
 	private static LinkedBlockingQueue<byte[]> buffer = new LinkedBlockingQueue<byte[]>();
+	// TODO
 	//private final static Logger log = LogManager.getLogger(Main.class);
 	public static void main(String args[])
 	{
