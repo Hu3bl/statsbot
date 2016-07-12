@@ -6,11 +6,15 @@ import statsbot.core.udp.parser.UDPParser;
 import statsbot.core.udp.server.UDPServer;
 import statsbot.messages.regex.RegexInitializer;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class Main 
 {
 	private static LinkedBlockingQueue<byte[]> buffer = new LinkedBlockingQueue<byte[]>();
-	// TODO
-	//private final static Logger log = LogManager.getLogger(Main.class);
+	private final static Logger log = LogManager.getLogger(Main.class);
+	
 	public static void main(String args[])
 	{
 		RegexInitializer.initializeRegexObjects();
@@ -37,11 +41,13 @@ public class Main
 			
 			if(parser.parseData(new String(receivedData)))
 			{
-				System.out.print("success " + new String(receivedData));
+				//System.out.print("success " + new String(receivedData));
+				log.info("Success " + new String(receivedData));
 			}
 			else
 			{
-				System.out.print("error " + new String(receivedData));
+				//System.out.print("error " + new String(receivedData));
+				log.info("Error " + new String(receivedData));
 			}		
 		}
 	}
