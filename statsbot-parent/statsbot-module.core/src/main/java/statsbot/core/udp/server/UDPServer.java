@@ -5,11 +5,17 @@ import java.net.DatagramSocket;
 import java.net.SocketException;
 import java.util.concurrent.BlockingQueue;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import statsbot.core.main.Main;
+
 public class UDPServer implements Runnable
 {
 	private final static int PACKETSIZE = 1500;
 	private DatagramSocket socket = null;
 	private BlockingQueue<byte[]> buffer = null;
+	private final static Logger log = LogManager.getLogger(UDPServer.class);
 	
 	public UDPServer(int port, BlockingQueue<byte[]> buffer)
 	{
@@ -17,12 +23,12 @@ public class UDPServer implements Runnable
 		try 
 		{
 			socket = new DatagramSocket(port);
+			log.info("Opened DatagramSocket on port " + port);
 		} 
 		catch (SocketException e) 
 		{
 			e.printStackTrace();
 		}
-		System.out.println("Opened DatagramSocket on port " + port);
 	}
 	
 	@Override
@@ -49,7 +55,7 @@ public class UDPServer implements Runnable
 		}
 		catch (Exception e)
 		{
-			System.out.println(e);
+			e.printStackTrace();
 		}
 		finally
 		{

@@ -2,7 +2,6 @@
  */
 package MessagesModel;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Round Start Message</b></em>'.
@@ -29,12 +28,12 @@ public interface RoundStartMessage extends Message {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time</em>' attribute.
-	 * @see #setTime(int)
+	 * @see #setTime(long)
 	 * @see MessagesModel.ModelPackage#getRoundStartMessage_Time()
 	 * @model
 	 * @generated
 	 */
-	int getTime();
+	long getTime();
 
 	/**
 	 * Sets the value of the '{@link MessagesModel.RoundStartMessage#getTime <em>Time</em>}' attribute.
@@ -44,6 +43,6 @@ public interface RoundStartMessage extends Message {
 	 * @see #getTime()
 	 * @generated
 	 */
-	void setTime(int value);
+	void setTime(long value);
 
 } // RoundStartMessage

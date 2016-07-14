@@ -35,18 +35,15 @@ public class Main
 			} 
 			catch (InterruptedException e)
 			{
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
 			if(parser.parseData(new String(receivedData)))
 			{
-				//System.out.print("success " + new String(receivedData));
 				log.info("Success " + new String(receivedData));
 			}
 			else
 			{
-				//System.out.print("error " + new String(receivedData));
 				log.info("Error " + new String(receivedData));
 			}		
 		}

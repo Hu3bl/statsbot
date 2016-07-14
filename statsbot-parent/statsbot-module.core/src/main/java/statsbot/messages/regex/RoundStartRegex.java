@@ -25,6 +25,8 @@ public class RoundStartRegex implements IRegex
 		if(m.find())
 		{
 			message = ModelFactory.eINSTANCE.createRoundStartMessage();
+			
+			message.setTime(System.currentTimeMillis());
 		}
 		
 		return message;

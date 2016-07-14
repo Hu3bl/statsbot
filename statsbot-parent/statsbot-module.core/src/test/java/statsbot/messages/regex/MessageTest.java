@@ -351,13 +351,11 @@ public class MessageTest {
 	{
 		String input = "Team \"CT\" triggered \"SFUI_Notice_Target_Saved\"";// (CT \"1\") (T \"1\")";
 		
-		//TODO
 		RoundScoredMessage message = (RoundScoredMessage) new RoundScoredRegex().tryCreatingMessage(input);
 
-		
-		//assertEquals("CT", message.getTeam());
-		//assertEquals("CT", message.getTeamWin());
-		//assertEquals("saved", message.getType());
+		assertEquals("CT", message.getTeam());
+		assertEquals("CT", message.getTeamWin());
+		assertEquals("saved", message.getType());
 	}
 	
 	@Test
@@ -367,8 +365,8 @@ public class MessageTest {
 				
 		RoundStartMessage message = (RoundStartMessage) new RoundStartRegex().tryCreatingMessage(input);
 		
-		//TODO
-		//assertNotEquals(null, message.getTime());
+		assertNotEquals(null, message);
+		assertNotEquals(0, message.getTime());
 	}
 	
 	@Test

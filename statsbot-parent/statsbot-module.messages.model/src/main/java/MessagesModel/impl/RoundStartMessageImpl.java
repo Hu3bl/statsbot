@@ -4,7 +4,6 @@ package MessagesModel.impl;
 
 import MessagesModel.ModelPackage;
 import MessagesModel.RoundStartMessage;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -33,7 +32,7 @@ public class RoundStartMessageImpl extends MessageImpl implements RoundStartMess
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int TIME_EDEFAULT = 0;
+	protected static final long TIME_EDEFAULT = 0L;
 
 	/**
 	 * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
@@ -43,7 +42,7 @@ public class RoundStartMessageImpl extends MessageImpl implements RoundStartMess
 	 * @generated
 	 * @ordered
 	 */
-	protected int time = TIME_EDEFAULT;
+	protected long time = TIME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +68,7 @@ public class RoundStartMessageImpl extends MessageImpl implements RoundStartMess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getTime() {
+	public long getTime() {
 		return time;
 	}
 
@@ -78,8 +77,8 @@ public class RoundStartMessageImpl extends MessageImpl implements RoundStartMess
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTime(int newTime) {
-		int oldTime = time;
+	public void setTime(long newTime) {
+		long oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROUND_START_MESSAGE__TIME, oldTime, time));
@@ -108,7 +107,7 @@ public class RoundStartMessageImpl extends MessageImpl implements RoundStartMess
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ModelPackage.ROUND_START_MESSAGE__TIME:
-				setTime((Integer)newValue);
+				setTime((Long)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

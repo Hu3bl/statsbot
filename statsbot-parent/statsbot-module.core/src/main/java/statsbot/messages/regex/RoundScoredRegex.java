@@ -33,18 +33,23 @@ public class RoundScoredRegex implements IRegex
 				case "Terrorists_Win": 
 					message.setTeamWin("T"); 
 					message.setType("normal");
+					break;
 				case "CTs_Win":
 					message.setTeamWin("CT"); 
 					message.setType("normal");
+					break;
 				case "Target_Bombed":
 					message.setTeamWin("T");
 					message.setType("bombExploded");
+					break;
 				case "Target_Saved":
 					message.setTeamWin("CT");
 					message.setType("saved");
+					break;
 				case "Bomb_Defused":
 					message.setTeamWin("CT");
 					message.setType("bombDefused");
+					break;
 				default:
 					return null;
 			}
